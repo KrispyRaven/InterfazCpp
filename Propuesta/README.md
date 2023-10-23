@@ -41,22 +41,34 @@ A pesar de ser una de las bibliotecas de interfaz gráfica de usuario (GUI) más
 * Desempeño: En comparación con bibliotecas de interfaz de usuario más livianas, QT puede consumir más recursos del sistema y tener un rendimiento ligeramente inferior en sistemas con capacidades limitadas o en aplicaciones que requieren un rendimiento extremadamente alto.
 
 ### wxWidgets
-A continuación se enlistan algunas de las ventajas que se encontraron luego de investigar la librería wxWidgets:
+wxWidgets es un framework de código abierto en C++ que te permite escribir aplicaciones de interfaz gráfica (GUI) que funcionan en varias plataformas y se ven y se sienten nativas, tanto en C++ como en otros lenguajes de programación. A continuación se enlistan algunas de las ventajas que se encontraron luego de investigar la librería wxWidgets:
 
-- Basta con escribir el código de la GUI una sola vez, ya que es posible ejecutarlo en diferentes sistemas operativos, como Windows, Unix y macOS. Además, el aspecto de la interfaz se adapta al aspecto nativo del sistema operativo. 
+* Portabilidad multiplataforma: Basta con escribir el código de la GUI una sola vez, ya que es posible ejecutarlo en diferentes sistemas operativos, como Windows, Unix y macOS. Además, el aspecto de la interfaz se adapta al aspecto nativo del sistema operativo. 
 
-- Hay bastante documentación, foros y recursos en YouTube.
+* Comunidad activa y soporte profesional: Hay bastante documentación, foros y recursos en YouTube. Actualmente, la pagina oficial cuenta con mas de 100 ejemplos de programas.
 
-- En comparación a otros programas para crear GUI (como Win32 API), el código que se requiere para crear una GUI sencilla, requiere de menos lineas de código. Asimismo, el código puede llegar a ser sencillo de entender, lo cual es fundamental para disminuir el impacto de la curva de aprendizaje.
+* Codigo simple: En comparación a otros programas para crear GUI (como Win32 API), el código que se requiere para crear una GUI basica, requiere de menos lineas de código en wxWidgets. Asimismo, el código puede llegar a ser sencillo de entender, lo cual es fundamental para disminuir el impacto de la curva de aprendizaje.
 
-- Es un software gratis
+* Costo: Es un software de código abierto completamente gratuito, sin ningun tipo de restricción. Esto es una gran ventaja sobre Qt, ya que este sí tiene algunas licencias de pago.
+
+Por otro lado, wxWidgets cuenta con ciertas desventajas, las cuales se muestran a continuacion:
+
+* Visual designer: A diferencia de QT, wxwidgets no cuenta con una herramienta visual que ayude a diseñar la GUI.
+
+* Aplicaciones simples: Con wxWidgets se pueden crear interfaces para aplicaciones simples. Cuando la aplicación tiene un grado de complejidad alto, es recomendable usar Qt, debido a los features que este puede llegar a brindar dependiendo de la licencia que se pague. 
 
 
 ### Elección final
-En base a la información proporcionada anteriormente, las mejores librerías son QT y wxWidgets. Ahora bien, a pesar de que Qt cuenta con una herramienta visual para crear la GUI, se elige wxWidgets, debido a que es completamente gratuito. Asimismo, dado que wxWidgets no cuenta con una herramienta visual para crear la GUI, se tiene certeza de que todo el codigo creado en wxWidgets es el encargado de generar toda la GUI. Esto garantizará una mejor comprensión del funcionamiento de la GUI creada, lo cual sera fundamental para debuggear apropiadamente.
+En base a la información proporcionada anteriormente, las mejores librerías son QT y wxWidgets. Ahora bien, a pesar de que Qt cuenta con una herramienta visual para crear la GUI, se elige wxWidgets, debido a que es completamente gratuito. Asimismo, dado que wxWidgets no cuenta con una herramienta visual para crear la GUI, se tiene certeza de que todo el codigo creado en wxWidgets es el encargado de generar toda la GUI. Esto garantizará una mejor comprensión del funcionamiento de la GUI creada, lo cual será fundamental para debuggear apropiadamente. De igual forma, la aplicación para la cual se va a crear la GUI no es compleja, por lo que se tiene certeza que wxWidgets proporcionara las herramientas necesarias para crear una interfaz apropiada. Por último, se encontraron mejores recursos en internet para aprender con wxWidgets en comparación a los encontrados para Qt.
 
 ## Plan de trabajo
-El plan de trabajo consiste en seguir los pasos que se muestran a continuacioón:
+A nivel general, el plan de trabajo se puede dividir en las fases que se muestran en el siguiente diagrama de bloques: 
+
+![Diagrama de bloques parte 1](diagramadebloques.jpeg)
+
+
+
+A nivel más específico, se pueden llevar a cabo los siguientes pasos para ir cumpliendo las diferentes fases que se muestran en el diagrama de bloques anterior:
 
 1. Investigar las diferentes clases y funciones que posee la librería wxWidgets.
 
@@ -73,15 +85,10 @@ El plan de trabajo consiste en seguir los pasos que se muestran a continuacioón
 7. Crear todas las pantallas necesarias y conectarlas entre sí para crear el proyecto propuesto.
 
 
-## Bibliografia
+## Bibliografía
 
 - wxWidgets Cross-Platform GUI Library. (s/f). Wxwidgets.org. Recuperado el 22 de octubre de 2023, de https://www.wxwidgets.org/
 
 - Sciber [@wearesciber]. (2021, noviembre 6). BEST GUI TOOLKITS for C++ | Sciber. Youtube. https://www.youtube.com/watch?v=UpREGWu7Oig
 
 - OttoBotCode [@OttoBotCode]. (2022, febrero 9). C++ GUI programming for beginners | episode 0 - introduction. Youtube. https://www.youtube.com/watch?v=BjQhp0eHmJw
-
-
-
-
-
