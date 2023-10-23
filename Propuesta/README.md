@@ -84,6 +84,17 @@ A nivel más específico, se pueden llevar a cabo los siguientes pasos para ir c
 
 7. Crear todas las pantallas necesarias y conectarlas entre sí para crear el proyecto propuesto.
 
+## Caracteristicas principales de la aplicacion
+
+1. Menu central para ir a las diferentes secciones
+
+2. Diferente pantalla con informacion de cada una de las secciones
+
+3. Codigo real de ejemplos de las diferentes secciones
+
+4. Ilustraciones para ejemplificar de manera visual ciertos procedimientos/definiciones
+
+5. Mini cuestionario al final de cada seccion
 
 ## Bibliografía
 
