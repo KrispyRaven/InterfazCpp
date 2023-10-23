@@ -92,3 +92,9 @@ A nivel más específico, se pueden llevar a cabo los siguientes pasos para ir c
 - Sciber [@wearesciber]. (2021, noviembre 6). BEST GUI TOOLKITS for C++ | Sciber. Youtube. https://www.youtube.com/watch?v=UpREGWu7Oig
 
 - OttoBotCode [@OttoBotCode]. (2022, febrero 9). C++ GUI programming for beginners | episode 0 - introduction. Youtube. https://www.youtube.com/watch?v=BjQhp0eHmJw
+
+- Codigazo [@Codigazo]. (2021, marzo 1). Cómo hacer una interfaz gráfica en C++. Youtube. https://youtu.be/8p9CQPmwxvo
+
+- Codigazo [@Codigazo]. (2021, marzo 31). ¿Que es Winapi y para que sirve?. Youtube. https://youtu.be/zOmsCzkxQlg
+
+- Qt GUI wiki (s/f). https://wiki.qt.io/Main Recuperado el 22 de octubre de 2023, de https://wiki.qt.io/Main
