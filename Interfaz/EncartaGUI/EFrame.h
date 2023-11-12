@@ -3,10 +3,10 @@
 
 
 
-class CFrame : public wxFrame
+class EFrame : public wxFrame
 {
 public:
-	CFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const wxSize& size);
+	EFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const wxSize& size);
 	void CloseClicked(wxCommandEvent& evt);
 	void UpdateText(const wxString& newText);
 	void OnButtonClick(wxCommandEvent& event);
