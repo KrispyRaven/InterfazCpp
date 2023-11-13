@@ -105,6 +105,7 @@ A nivel más específico, se pueden llevar a cabo los siguientes pasos para ir c
 # Avance
 ## Partes de la GUI creadas
 ### 1- Menú principal
+
 En primer lugar, se logra crear una interfaz gráfica, tal y como se muestra en la siguiente figura. Esta ventana contiene 4 botones: C/C++, OPP,
 Estructuras y Salir. Los primeros tres botones constituyen los 3 temas principales que se pretenden tocar al ingresar en cada uno de ellos. 
 
@@ -122,7 +123,10 @@ Para poder implementar la ventana anterior, considere las tres figuras que se mu
 
 En la imagen anterior se muestra el archivo MainFrame.hpp. A continuación, se muestra su respectiva implementación mediante el archivo MainFrame.cpp. Inicialmente, se define el constructor de dicha clase. Dentro de este método, se crean distintos objetos punteros (botones) de la clase wxButton y se almacenan en memoria dinámica. Cada uno de estos objetos recibe en sus parámetros, al objeto puntero panel, el cual me permite limitar el tamaño dsiponible para el botón, en conjunto con wxPoint( ) y wxSize( ), que me definen la ubicación y las dimensiones del botón respectivamente. 
 
-Por otro lado, un evento es generado cuando el usuario interactua con la GUI. Por ejemplo, cuando el usuario estripa algun botón, escribe en el teclado, reajusta el tamaño de la ventana, etc. En wxWidgets hay dos formas para detectar eventos y ejecutar un código en base al tipo de evento: Static Event Handling y Dynamic Event Handling. Para este caso, se trabajaran los eventos de forma dinámica, ya que de forma estática se tienen diferentes limitaciones. Para poder detectar algún evento, debemos crear un event handler asociado a dicho evento. Un event handler es simplemente un método (en este caso de la clase MainFrame) que es llamado cuando un evento en particular ocurre. De esta forma, en la imagen anterior (archivo: MainFrame.hpp), se muestra la declaración de 4 métodos event handler, y su respectiva implementación se muestra a continuación (en el archivo MainFrame.cpp) . Como se muestra, en los métodos OnOpenNewFrameX, se busca abrir una nueva ventana cuando el boton X es estripado. Ahora bien, ¿Cómo hacemos la conexión entre el evento de "estripar un bóton" y la ejecución de los métodos event handler OnOpenNewFrameX? Bueno, esa conexión se llama Binding y se implementa mediante el método Bind que se encuentra definido en la clase wxEBTHandler. No obstante, cada uno de los objetos (botones) creados puede acceder a sus métodos, ya que todas las clases asociadas a algún botón, constituyen clases hijas de la clase wxEBTHandler. Este método recibe como parámetros : la clase asociada al evento (wxEVT_BUTTON = "click en un botón" ) , el método asociado al evento (OnOpenNewFrameX) y por último, el objeto que se va a recibir el evento (this = ventana actual).De esta forma, se aplican este método 4 veces, ya que hay 4 botones.
+Por otro lado, un evento es generado cuando el usuario interactua con la GUI. Por ejemplo, cuando el usuario estripa algun botón, escribe en el teclado, reajusta el tamaño de la ventana, etc. En wxWidgets hay dos formas para detectar eventos y ejecutar un código en base al tipo de evento: Static Event Handling y Dynamic Event Handling. Para este caso, se trabajaran los eventos de forma dinámica, ya que de forma estática se tienen diferentes limitaciones. Para poder detectar algún evento, debemos crear un event handler asociado a dicho evento. Un event handler es simplemente un método (en este caso de la clase MainFrame) que es llamado cuando un evento en particular ocurre. De esta forma, en la imagen anterior (archivo: MainFrame.hpp), se muestra la declaración de 4 métodos event handler, y su respectiva implementación se muestra a continuación (en el archivo MainFrame.cpp) . Como se muestra, en los métodos OnOpenNewFrameX, se busca abrir una nueva ventana cuando el boton X es estripado. 
+
+
+Ahora bien, ¿Cómo hacemos la conexión entre el evento de "estripar un bóton" y la ejecución de los métodos event handler OnOpenNewFrameX? Bueno, esa conexión se llama Binding y se implementa mediante el método Bind que se encuentra definido en la clase wxEBTHandler. No obstante, cada uno de los objetos (botones) creados puede acceder a sus métodos, ya que todas las clases asociadas a algún botón, constituyen clases hijas de la clase wxEBTHandler. Este método recibe como parámetros : la clase asociada al evento (wxEVT_BUTTON = "click en un botón" ) , el método asociado al evento (OnOpenNewFrameX) y por último, el objeto que se va a recibir el evento (this = ventana actual).De esta forma, se aplican este método 4 veces, ya que hay 4 botones.
 
 ![Menu Principal](Imagenes/Codigo4.png)
 
@@ -133,6 +137,7 @@ Estructuras, se crea un nuevo objeto. Por un tema de orden y modularidad, las tr
 
 
 ### 2- Segunda Ventana ( Temas de C/C++ )
+
 Al estripar el botón C/C++, se abre la ventana que se muestra a continuación. 
 
 ![Menu Principal](Imagenes/Menu_CC.png)
@@ -140,6 +145,9 @@ Al estripar el botón C/C++, se abre la ventana que se muestra a continuación.
 Al estripar cualquier botón, se despliega un texto asociado al tema. De momento, no se ha incorporado la información respectiva, pero se planea incluir una explicación sencilla que incluya al menos una imagen que permita ilustrar el tema correspondiente. Esto se puede observar a continuación. Asimismo, al estripar el bóton "Regresar al menú principal", el programa logra cerrar la ventana.
 
 ![Menu Principal](Imagenes/Menu_CC2.png)
+
+
+
 Para poder implementar la ventana mostrada anteriormente, se emplean los archivos CFrame.cpp y CFrame.h, tal y como se muestra a continuación. A nivel conceptual, esta ventana; al igual que las otras dos ventanas auxiliares, implementa la misma metodología para trabajar con los eventos. No obstante, los métodos event handler definidos en esta ventana al estripar alguno de los botones, llevan a cabo diferentes tareas en comparación a las acciones que se realizaban en el menú principal. El método CloseClicked se utiliza para cerrar la ventana mediante la función Close(), y de esta forma, poder regresar al menú principal. El método OnButtonClick es llamado cada vez que el usuario estripa cualquiera de los botones disponibles, a excepción del botón: "Regresar al menú principal". Cuando se llama a este método, el objeto asociado al botón estripado se almacena en otro botón temporal de forma dinámica. Seguidamente, se logra determinar cual botón fue estripado al reconocer el buttonText del botón temporal, mediante una serie de condicionales if-else, y se procede a llamar al método UpdateText. Este método se encarga de actualizar en la ventana actual el texto mostrado.  
 
 ![Menu Principal](Imagenes/CFrame1.png)
