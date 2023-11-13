@@ -96,6 +96,60 @@ A nivel más específico, se pueden llevar a cabo los siguientes pasos para ir c
 
 5. Mini cuestionario al final de cada seccion
 
+
+# Avance
+## Partes de la GUI creadas
+### 1- Menú principal
+En primer lugar, se logra crear una interfaz gráfica, tal y como se muestra en la siguiente figura. Esta ventana contiene 4 botones: C/C++, OPP,
+Estructuras y Salir. Los primeros tres botones constituyen los 3 temas principales que se pretenden tocar al ingresar en cada uno de ellos. 
+![Menu Principal](Imagenes/Menu_principal.png)
+Para poder impplementar la ventana anterior, considere las tres figuras que se muestran a continuación. La primera figura muestra el contenido del archivo App.h. Aquí se muestra la clase App con un metodo llamado OnInit. Esta función es semejante a la función init main que se utiliza típicamente en cualquier código de C++. Esta función constituye el punto de entrada de todo el programa cuando se trabaja con una interfaz gráfica en WXwidgets. En la segunda figura (que constituye al archivo App.cpp), se muestra la implementación del método OnInit. Note que se crea un objeto de la clase MainFrame, la cual se muestra en la tercer figura. Asimismo, se aplican al objeto (ventana) tres métodos de la clase wxString: SetClientSize, Center y Show. Estos métodos permiten establecer el tamaño de la ventana, la ubicación de esta y permiten mostrarla, ya que por default esta se encuentra oculta. Por ultimo, el método OnInit devuelve True para que la aplicación siga activa. En otras palabras, a partir de este punto, el programa se queda esperando por la presencia de algún evento provocado por el usuario, es decir, a partir de este punto, el usuario decide el camino de ejecución. 
+![Menu Principal](Imagenes/Codigo1.png)
+![Menu Principal](Imagenes/Codigo2.png)
+![Menu Principal](Imagenes/Codigo3.png)
+En la imagen anterior se muestra el archivo MainFrame.hpp. A continuación, se muestra su respectiva implementación mediante el archivo MainFrame.cpp. Inicialmente, se define el constructor de dicha clase. Dentro de este método, se crean distintos objetos punteros (botones) de la clase wxButton y se almacenan en memoria dinámica. Cada uno de estos objetos recibe en sus parámetros, al objeto puntero panel, el cual me permite limitar el tamaño dsiponible para el botón, en conjunto con wxPoint( ) y wxSize( ), que me definen la ubicación y las dimensiones del botón respectivamente. 
+
+Por otro lado, un evento es generado cuando el usuario interactua con la GUI. Por ejemplo, cuando el usuario estripa algun botón, escribe en el teclado, reajusta el tamaño de la ventana, etc. En wxWidgets hay dos formas para detectar eventos y ejecutar un código en base al tipo de evento: Static Event Handling y Dynamic Event Handling. Para este caso, se trabajaran los eventos de forma dinámica, ya que de forma estática se tienen diferentes limitaciones. Para poder detectar algún evento, debemos crear un event handler asociado a dicho evento. Un event handler es simplemente un método (en este caso de la clase MainFrame) que es llamado cuando un evento en particular ocurre. De esta forma, en la imagen anterior (archivo: MainFrame.hpp), se muestra la declaración de 4 métodos event handler, y su respectiva implementación se muestra a continuación (en el archivo MainFrame.cpp) . Como se muestra, en los métodos OnOpenNewFrameX, se busca abrir una nueva ventana cuando el boton X es estripado. Ahora bien, ¿Cómo hacemos la conexión entre el evento de "estripar un bóton" y la ejecución de los métodos event handler OnOpenNewFrameX? Bueno, esa conexión se llama Binding y se implementa mediante el método Bind que se encuentra definido en la clase wxEBTHandler. No obstante, cada uno de los objetos (botones) creados puede acceder a sus métodos, ya que todas las clases asociadas a algún botón, constituyen clases hijas de la clase wxEBTHandler. Este método recibe como parámetros : la clase asociada al evento (wxEVT_BUTTON = "click en un botón" ) , el método asociado al evento (OnOpenNewFrameX) y por último, el objeto que se va a recibir el evento (this = ventana actual).De esta forma, se aplican este método 4 veces, ya que hay 4 botones.
+![Menu Principal](Imagenes/Codigo4.png)
+![Menu Principal](Imagenes/Codigo5.png)
+
+En la figura anterior, note que en los métodos OnOpenNewFrameX se crea otro objeto, el cual constituye otra ventana. Es decir, al estripar cualquiera de los botones: C/C++, OPP,
+Estructuras, se crea un nuevo objeto. Por un tema de orden y modularidad, las tres ventanas creadas, se trabajan en archivos indepdientes: CFrame (.cpp y .h)  ,OPP (.cpp y .h) y EFrame (.cpp y .h). 
+
+### 2- Segunda Ventana ( Temas de C/C++ )
+Al estripar el botón C/C++, se abre la ventana que se muestra a continuación. 
+
+![Menu Principal](Imagenes/Menu_CC.png)
+
+Al estripar cualquier botón, se despliega un texto asociado al tema. De momento, no se ha incorporado la información respectiva, pero se planea incluir una explicación sencilla que incluya al menos una imagen que permita ilustrar el tema correspondiente. Esto se puede observar a continuación. Asimismo, al estripar el bóton "Regresar al menú principal", el programa logra cerrar la ventana.
+
+![Menu Principal](Imagenes/Menu_CC2.png)
+Para poder implementar la ventana mostrada anteriormente, se emplean los archivos CFrame.cpp y CFrame.h, tal y como se muestra a continuación. A nivel conceptual, esta ventana; al igual que las otras dos ventanas auxiliares, implementa la misma metodología para trabajar con los eventos. No obstante, los métodos event handler definidos en esta ventana al estripar alguno de los botones, llevan a cabo diferentes tareas en comparación a las acciones que se realizaban en el menú principal. El método CloseClicked se utiliza para cerrar la ventana mediante la función Close(), y de esta forma, poder regresar al menú principal. El método OnButtonClick es llamado cada vez que el usuario estripa cualquiera de los botones disponibles, a excepción del botón: "Regresar al menú principal". Cuando se llama a este método, el objeto asociado al botón estripado se almacena en otro botón temporal de forma dinámica. Seguidamente, se logra determinar cual botón fue estripado al reconocer el buttonText del botón temporal, mediante una serie de condicionales if-else, y se procede a llamar al método UpdateText. Este método se encarga de actualizar en la ventana actual el texto mostrado.  
+![Menu Principal](Imagenes/CFrame1.png)
+![Menu Principal](Imagenes/CFrame2.png)
+![Menu Principal](Imagenes/CFrame3.png)
+
+
+### 3- Tercera Ventana ( Temas de programación orientada a objetos (OOP) )
+Al estripar el botón OOP, se abre la ventana que se muestra a continuación. Al estripar cualquier botón, se despliega un texto asociado al tema. De momento, no se ha incorporado la información respectiva, pero se planea incluir una explicación sencilla que incluya al menos una imagen que permita ilustrar el tema correspondiente. Esto se puede observar a continuación. Asimismo, al estripar el bóton "Regresar al menú principal", el programa logra cerrar la ventana. Cabe destacar que, a nivel de código, la implementación es la misma con respecto a la ventana de C/C++ explicada anteriormente, razón por la cual, no se incluye el código correspondiente.
+
+![Menu Principal](Imagenes/Menu_OPP.png)
+
+### 4- Cuarta Ventana ( Temas de estructuras dinámicas de datos y criterios de algoritmos )
+Al estripar el botón Estructuras , se abre la ventana que se muestra a continuación. Al estripar cualquier botón, se despliega un texto asociado al tema. De momento, no se ha incorporado la información respectiva, pero se planea incluir una explicación sencilla que incluya al menos una imagen que permita ilustrar el tema correspondiente. Esto se puede observar a continuación. Asimismo, al estripar el bóton "Regresar al menú principal", el programa logra cerrar la ventana. Cabe destacar que, a nivel de código, la implementación es la misma con respecto a la ventana de C/C++ explicada anteriormente, razón por la cual, no se incluye el código correspondiente.
+
+![Menu Principal](Imagenes/Menu_Estructuras.png)
+
+## Desafíos y Soluciones
+
+* Inicialización del programa con wxWidgets: Al inicio se creía que, como cualquier otro programa en C++, el programa debía iniciar dentro de la función int main( ). Sin embargo, se tenían errores de compilación. Como solución, se investigó que wxWidgets utiliza MACROS, los cuales son fragmentos de código predefinidos que se expanden durante la compilación para simplificar procesos. Uno de esos procesos es la inicialización de un programa. En efecto, se emplea el macro: wxIMPLEMENT_APP, el cual simplifica la inicialización de la aplicación (clase App) en wxWidgets , ya que genera automáticamente el punto de entrada principal (int main()) y otras configuraciones necesarias para que la aplicación funcione correctamente. 
+
+* Entender el manejo eventos dinámico: Entender de forma correcta el funcionamiento de esta librería a tomado tiempo considerable, sin embargo se ha logrado  tener un buen manejo de conceptos relacionado al manejo de Eventos y los distintos objetos y clases con las que wxWidgets trabaja para crear botones y ventanas. Como solución, se buscaron ejemplos sencillos en internet para ir entendiendo poco a poco el funcionamiento detrás de crear una GUI. Gracias a ello, se ha podido entender cómo se capturan eventos a través del método Bind y de los métodos de tipo event handler.
+
+* Manejo de memoria dinámica: Al inicio se tenían dudas sobre cómo administrar la memoria dinámica, ya que, como se pudo observar en el código proporcionado, cada objeto creado, practicamente se almacenaba en la memoria dinámica. Como solución, se pudo investigar que wxWidgets se encarga de devolver el espacio de memoria ocupado, una vez que se cierran todas las ventanas. 
+
+
+
 ## Bibliografía
 
 - wxWidgets Cross-Platform GUI Library. (s/f). Wxwidgets.org. Recuperado el 22 de octubre de 2023, de https://www.wxwidgets.org/
