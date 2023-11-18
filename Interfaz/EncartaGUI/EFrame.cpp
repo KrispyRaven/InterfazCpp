@@ -14,7 +14,7 @@ EFrame::EFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
 	wxButton* button4 = new wxButton(panel, wxID_ANY, "STL", wxPoint(20, 55 + 50 + 55 + 55), wxSize(100, 50));
 	wxButton* button5 = new wxButton(panel, wxID_ANY, "Regresar al menu principal", wxPoint(550, 400), wxSize(200, 50));
 
-    m_textCtrl = new wxStaticText(panel, wxID_ANY, "Texto inicial", wxPoint(140, 50), wxSize(400, 600), wxALIGN_LEFT);
+    m_textCtrl = new wxStaticText(panel, wxID_ANY, "Las estructuras de datos en C++ son formas de organizar y almacenar datos en la memoria de manera eficiente para facilitar su manipulación y acceso. ", wxPoint(140, 50), wxSize(400, 600), wxALIGN_LEFT);
 
 	button5->Bind(wxEVT_BUTTON, &EFrame::CloseClicked, this);
     button1->Bind(wxEVT_BUTTON, &EFrame::OnButtonClick, this);
