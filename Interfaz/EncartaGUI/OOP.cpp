@@ -7,7 +7,7 @@ OOP::OOP(wxFrame* parent, const wxString& title, const wxPoint& pos, const wxSiz
 
 	wxPanel* panel = new wxPanel(this);
 	wxButton* button1 = new wxButton(panel, wxID_ANY, "Clases", wxPoint(20, 50), wxSize(100, 50));
-	wxButton* button2 = new wxButton(panel, wxID_ANY, "Atributoss", wxPoint(20, 55 + 50), wxSize(100, 50));
+	wxButton* button2 = new wxButton(panel, wxID_ANY, "Abstraccion", wxPoint(20, 55 + 50), wxSize(100, 50));
 	wxButton* button3 = new wxButton(panel, wxID_ANY, "Herencia", wxPoint(20, 55 + 50 + 55), wxSize(100, 50));
 	wxButton* button4 = new wxButton(panel, wxID_ANY, "Polimorfismo", wxPoint(20, 55 + 50 + 55 + 55), wxSize(100, 50));
 	wxButton* button5 = new wxButton(panel, wxID_ANY, "Regresar al menu principal", wxPoint(550, 400), wxSize(200, 50));

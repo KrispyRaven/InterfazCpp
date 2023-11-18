@@ -42,7 +42,7 @@ void EFrame::OnButtonClick(wxCommandEvent& event)
         wxString buttonText = button->GetLabel();
         // Aquí puedes personalizar el texto según el botón presionado
         if (buttonText == "Manejo de memoria") {
-            UpdateText("Nuevo Texto 1");
+            UpdateText(R"(Nuevo Texto 1)");
         }
         else if (buttonText == "Estructuras") {
             UpdateText("Nuevo Texto 2");
