@@ -9,7 +9,9 @@
 
 
 
-
+/**
+* @brief Se hereda desde wxFrame para crear la ventana Secundaria
+*/
 class CFrame : public wxFrame
 {
 public:
@@ -33,9 +35,17 @@ public:
 	* @brief Metodo que recibe un nuevo texto para ser modificado
 	* @param newText Recibe un nuevo texto para actualizar el actual
 	*/
-
-	void Updateimage(const wxString& newimage, int pixX, int pixY, int posX, int posY);
 	void UpdateText(const wxString& newText);
+
+	/**
+	* @brief Metodo que actualiza la imagen que se muestra
+	* @param newimage Recibe el nombre/ubicacion  de la imagen
+	* @param pixX Recibe el tamaño en pixeles del eje x
+	* @param pixY Recibe el tamaño en pixeles del eje x* @param pixX Recibe el tamaño en pixeles del eje y
+	* @param posX Recibe la posicion en el eje x de la imagen 
+	* @param posY Recibe la posicion en el eje Y de la imagen 
+	*/
+	void Updateimage(const wxString& newimage, int pixX, int pixY, int posX, int posY);
 
 	/**
 	* @brief Metodo que nos reconoce el boton que se ha clickeado
@@ -47,9 +57,13 @@ public:
 
 private:
 	/**
-	* @param m_textCtrl "m_textCtrl" Es un control de texto estatico no copiable por el usuario
+	* @param m_textCtrl Es un control de texto estatico no copiable por el usuario
 	*/
 	wxStaticText* m_textCtrl;
+
+	/**
+	* @param image Objeto de la imagen que se muestra
+	*/
 	wxStaticBitmap* image;
 	wxButton* button1;
 	wxButton* button2;

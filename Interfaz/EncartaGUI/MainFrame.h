@@ -7,6 +7,9 @@
 */
 
 #include <wx/wx.h>
+/**
+* @brief Se hereda desde wxFrame para crear la ventana principal
+*/
 class MainFrame : public wxFrame
 {
 public:
