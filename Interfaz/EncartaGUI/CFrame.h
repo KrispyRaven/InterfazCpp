@@ -7,7 +7,7 @@
 */
 #include <wx/wx.h>
 
-
+wxDECLARE_EVENT(wxEVT_CFRAME_CLOSED, wxCommandEvent);
 
 /**
 * @brief Se hereda desde wxFrame para crear la ventana Secundaria
@@ -53,7 +53,6 @@ public:
 	* Este objeto wxCommandEvent contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado.
 	*/
 	void OnButtonClick(wxCommandEvent& event);
-	void SpecialClick(wxCommandEvent& event);
 
 private:
 	/**

@@ -19,7 +19,8 @@ public:
 	* @param tittle ¨tittle¨ se encarga de generarnos el titulo de nuestra ventana
 	*/
 	MainFrame(const wxString& tittle);
-private:
+	
+	
 	// Un event Handler es un metodo que se llama en respuesta a un evento
 
 	/**
@@ -49,5 +50,15 @@ private:
 	* Este objeto wxCommandEvent contiene información sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado.
 	*/
 	void OnExitButtonClick(wxCommandEvent& event);
+	
+	// Estas fueron los tres metodos que agregue
+	void OnOpenNewFrame4(wxCommandEvent& event);
+	
+	void OnQFrameClosed(wxCommandEvent& event);
+	void OnCFrameClosed(wxCommandEvent& event);
+	
+public:
+	wxStaticText* main_text;
+	
 };
 
