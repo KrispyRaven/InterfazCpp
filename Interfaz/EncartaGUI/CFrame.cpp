@@ -12,7 +12,8 @@ CFrame::CFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
     : wxFrame(parent, wxID_ANY, title, pos, size)
 {
 
-    wxPanel* panel = new wxPanel(this);
+    
+    panel = new wxPanel(this);
     this-> button1 = new wxButton(panel, wxID_ANY, "DataType", wxPoint(20, 50), wxSize(100, 50));
     this-> button2 = new wxButton(panel, wxID_ANY, "Operadores", wxPoint(20, 55 + 50), wxSize(100, 50));
     this-> button3 = new wxButton(panel, wxID_ANY, "Toma decisiones", wxPoint(20, 55 + 50 + 55), wxSize(100, 50));

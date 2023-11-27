@@ -48,13 +48,13 @@ public:
 	void Updateimage(const wxString& newimage, int pixX, int pixY, int posX, int posY);
 
 	/**
-	* @brief Metodo que nos reconoce el boton que se ha clickeado
+	* @brief Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado
 	* @param event recibe un objeto wxCommandEvent& como argumento.
 	* Este objeto wxCommandEvent contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado.
 	*/
 	void OnButtonClick(wxCommandEvent& event);
 
-private:
+
 	/**
 	* @param m_textCtrl Es un control de texto estatico no copiable por el usuario
 	*/
@@ -64,12 +64,41 @@ private:
 	* @param image Objeto de la imagen que se muestra
 	*/
 	wxStaticBitmap* image;
+
+	/**
+	* @param burron1 Objeto del tipo Boton
+	*/
 	wxButton* button1;
+
+	/**
+	* @param burron1 Objeto del tipo Boton
+	*/
 	wxButton* button2;
+	
+	/**
+	* @param burron1 Objeto del tipo Boton
+	*/
 	wxButton* button3;
+	
+	/**
+	* @param burron1 Objeto del tipo Boton
+	*/
 	wxButton* button4;
-	wxButton* button5; 
+	
+	/**
+	* @param burron1 Objeto del tipo Boton
+	*/
+	wxButton* button5;
+	
+	/**
+	* @param burron1 Objeto del tipo Boton
+	*/
 	wxButton* button6;
+
+	/**
+	* @param panel Objeto del tipo wxPanel que referencia nuestro panel
+	*/
+	wxPanel* panel;
 };
 
 // Declaraci�n de la variable global 
