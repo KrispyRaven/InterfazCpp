@@ -59,6 +59,10 @@ public:
 	
 public:
 	wxStaticText* main_text;
+	/**
+	* @param image Objeto de la imagen que se muestra
+	*/
+	wxStaticBitmap* image;
 	
 };
 

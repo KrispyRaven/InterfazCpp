@@ -10,7 +10,7 @@
 #include <wx/mediactrl.h>
 
 /**
-* @brief Se hereda desde EFrame para crear la ventana Secundaria
+* @brief Clase que se hereda desde CFrame para crear la ventana Secundaria
 */
 class EFrame : public CFrame
 {

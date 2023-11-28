@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Encarta: Archivo de código fuente QFrame.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Encarta<span id="projectnumber">&#160;3.1</span>
+   </div>
+   <div id="projectbrief">Enseñansa de c++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">QFrame.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_q_frame_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;wx/wx.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_main_frame_8h.html">MainFrame.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_q_frame_8h.html#aea49b72cf904db3cc5718dfec206aef5">   16</a></span><a class="code hl_function" href="_q_frame_8h.html#aea49b72cf904db3cc5718dfec206aef5">wxDECLARE_EVENT</a>(wxEVT_QFRAME_CLOSED, wxCommandEvent);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_q_frame.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="class_q_frame.html">QFrame</a> : <span class="keyword">public</span> wxFrame</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="class_q_frame.html">QFrame</a>(wxFrame* parent, <span class="keyword">const</span> wxString&amp; title, <span class="keyword">const</span> wxPoint&amp; pos, <span class="keyword">const</span> wxSize&amp; size);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_q_frame.html#a40282458939f9c72fa9058e1494280f4">CloseClicked</a>(wxCommandEvent&amp; evt);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_q_frame.html#a94e783b9b7ad8df9cff0f0b8f1df08ea">Updateimage</a>(<span class="keyword">const</span> wxString&amp; newimage, <span class="keywordtype">int</span> pixX, <span class="keywordtype">int</span> pixY, <span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_q_frame.html#a9feed1ede7c4543bdd286839e2d17a51">UpdateQuestion</a>(<span class="keyword">const</span> wxString&amp; Question, <span class="keyword">const</span> wxString&amp; OpcionA, <span class="keyword">const</span> wxString&amp; OpcionB, <span class="keyword">const</span> wxString&amp; OpcionC, <span class="keyword">const</span> wxString&amp; OpcionD, <span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_q_frame.html#abf3175703c7c3f746d37771f56023b27">UpdateExtraText</a>(<span class="keyword">const</span> wxString&amp; text, <span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_q_frame.html#a518e4fe6979dc917cff5c0178cb730f6">OnButtonClick</a>(wxCommandEvent&amp; event);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_q_frame.html#afaee69b1681ffb8ae32f13f2ade6e3c5">ABCDClick</a>(wxCommandEvent&amp; event);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_q_frame.html#a481ad7ea490f793d37124462479256b5">   90</a></span>    wxStaticText* <a class="code hl_variable" href="class_q_frame.html#a481ad7ea490f793d37124462479256b5">m_textCtrl</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_q_frame.html#aa6986db260480ef220733ebd06b08949">   95</a></span>    wxStaticText* <a class="code hl_variable" href="class_q_frame.html#aa6986db260480ef220733ebd06b08949">extra_text</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_q_frame.html#a8958be9af5a32a80fd912c68772feab6">  100</a></span>    wxStaticBitmap* <a class="code hl_variable" href="class_q_frame.html#a8958be9af5a32a80fd912c68772feab6">image</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_q_frame.html#a22f7f5f353b5031e67fd8436f83e2930">  105</a></span>    wxButton* <a class="code hl_variable" href="class_q_frame.html#a22f7f5f353b5031e67fd8436f83e2930">button1</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_q_frame.html#a9264a0cd7893aff006a9f92f63889a78">  110</a></span>    wxButton* <a class="code hl_variable" href="class_q_frame.html#a9264a0cd7893aff006a9f92f63889a78">button2</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_q_frame.html#ac6ff820281c61a3faeeff26995a597e2">  115</a></span>    wxButton* <a class="code hl_variable" href="class_q_frame.html#ac6ff820281c61a3faeeff26995a597e2">button3</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_q_frame.html#aa2bc9d3504af2620c12b3aa7160b88f7">  120</a></span>    wxButton* <a class="code hl_variable" href="class_q_frame.html#aa2bc9d3504af2620c12b3aa7160b88f7">button5</a>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_q_frame.html#a9cbb18879392690472d2359388386d86">  125</a></span>    wxButton* <a class="code hl_variable" href="class_q_frame.html#a9cbb18879392690472d2359388386d86">button6</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_q_frame.html#add56fb0a21c54837ba071ab40f9ea53a">  130</a></span>    wxCheckBox* <a class="code hl_variable" href="class_q_frame.html#add56fb0a21c54837ba071ab40f9ea53a">buttonA</a>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_q_frame.html#aee692c74bf3c2b4d801d525fc7085be1">  135</a></span>    wxCheckBox* <a class="code hl_variable" href="class_q_frame.html#aee692c74bf3c2b4d801d525fc7085be1">buttonB</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_q_frame.html#afec77b7bb308b98bd69e90f1ef3ef596">  140</a></span>    wxCheckBox* <a class="code hl_variable" href="class_q_frame.html#afec77b7bb308b98bd69e90f1ef3ef596">buttonC</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_q_frame.html#af545deb38a63ebf79053a9f60d0601db">  145</a></span>    wxCheckBox* <a class="code hl_variable" href="class_q_frame.html#af545deb38a63ebf79053a9f60d0601db">buttonD</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_q_frame.html#a37a4c3503afec1a097fb5461f42c14d9">  150</a></span>    wxCheckBox* <a class="code hl_variable" href="class_q_frame.html#a37a4c3503afec1a097fb5461f42c14d9">pastButton</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>};</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_q_frame_8h.html#a88859ce72faebb79ea0a2bca00a0f46b">e</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keyword">extern</span> <span class="keywordtype">string</span> <a class="code hl_variable" href="_q_frame_8h.html#a2b62b9d9ee4bba482f36fb73b6c18325">temita</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="ttc" id="a_main_frame_8h_html"><div class="ttname"><a href="_main_frame_8h.html">MainFrame.h</a></div></div>
+<div class="ttc" id="a_q_frame_8h_html_a2b62b9d9ee4bba482f36fb73b6c18325"><div class="ttname"><a href="_q_frame_8h.html#a2b62b9d9ee4bba482f36fb73b6c18325">temita</a></div><div class="ttdeci">string temita</div><div class="ttdef"><b>Definition</b> QFrame.cpp:7</div></div>
+<div class="ttc" id="a_q_frame_8h_html_a88859ce72faebb79ea0a2bca00a0f46b"><div class="ttname"><a href="_q_frame_8h.html#a88859ce72faebb79ea0a2bca00a0f46b">e</a></div><div class="ttdeci">int e</div><div class="ttdef"><b>Definition</b> QFrame.cpp:6</div></div>
+<div class="ttc" id="a_q_frame_8h_html_aea49b72cf904db3cc5718dfec206aef5"><div class="ttname"><a href="_q_frame_8h.html#aea49b72cf904db3cc5718dfec206aef5">wxDECLARE_EVENT</a></div><div class="ttdeci">wxDECLARE_EVENT(wxEVT_QFRAME_CLOSED, wxCommandEvent)</div></div>
+<div class="ttc" id="aclass_q_frame_html"><div class="ttname"><a href="class_q_frame.html">QFrame</a></div><div class="ttdoc">Clase creadora de la ventana de quiz, hereda de wxFrame.</div><div class="ttdef"><b>Definition</b> QFrame.h:22</div></div>
+<div class="ttc" id="aclass_q_frame_html_a22f7f5f353b5031e67fd8436f83e2930"><div class="ttname"><a href="class_q_frame.html#a22f7f5f353b5031e67fd8436f83e2930">QFrame::button1</a></div><div class="ttdeci">wxButton * button1</div><div class="ttdef"><b>Definition</b> QFrame.h:105</div></div>
+<div class="ttc" id="aclass_q_frame_html_a37a4c3503afec1a097fb5461f42c14d9"><div class="ttname"><a href="class_q_frame.html#a37a4c3503afec1a097fb5461f42c14d9">QFrame::pastButton</a></div><div class="ttdeci">wxCheckBox * pastButton</div><div class="ttdef"><b>Definition</b> QFrame.h:150</div></div>
+<div class="ttc" id="aclass_q_frame_html_a40282458939f9c72fa9058e1494280f4"><div class="ttname"><a href="class_q_frame.html#a40282458939f9c72fa9058e1494280f4">QFrame::CloseClicked</a></div><div class="ttdeci">void CloseClicked(wxCommandEvent &amp;evt)</div><div class="ttdoc">Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra.</div><div class="ttdef"><b>Definition</b> QFrame.cpp:83</div></div>
+<div class="ttc" id="aclass_q_frame_html_a481ad7ea490f793d37124462479256b5"><div class="ttname"><a href="class_q_frame.html#a481ad7ea490f793d37124462479256b5">QFrame::m_textCtrl</a></div><div class="ttdeci">wxStaticText * m_textCtrl</div><div class="ttdef"><b>Definition</b> QFrame.h:90</div></div>
+<div class="ttc" id="aclass_q_frame_html_a518e4fe6979dc917cff5c0178cb730f6"><div class="ttname"><a href="class_q_frame.html#a518e4fe6979dc917cff5c0178cb730f6">QFrame::OnButtonClick</a></div><div class="ttdeci">void OnButtonClick(wxCommandEvent &amp;event)</div><div class="ttdoc">Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado.</div><div class="ttdef"><b>Definition</b> QFrame.cpp:126</div></div>
+<div class="ttc" id="aclass_q_frame_html_a8958be9af5a32a80fd912c68772feab6"><div class="ttname"><a href="class_q_frame.html#a8958be9af5a32a80fd912c68772feab6">QFrame::image</a></div><div class="ttdeci">wxStaticBitmap * image</div><div class="ttdef"><b>Definition</b> QFrame.h:100</div></div>
+<div class="ttc" id="aclass_q_frame_html_a9264a0cd7893aff006a9f92f63889a78"><div class="ttname"><a href="class_q_frame.html#a9264a0cd7893aff006a9f92f63889a78">QFrame::button2</a></div><div class="ttdeci">wxButton * button2</div><div class="ttdef"><b>Definition</b> QFrame.h:110</div></div>
+<div class="ttc" id="aclass_q_frame_html_a94e783b9b7ad8df9cff0f0b8f1df08ea"><div class="ttname"><a href="class_q_frame.html#a94e783b9b7ad8df9cff0f0b8f1df08ea">QFrame::Updateimage</a></div><div class="ttdeci">void Updateimage(const wxString &amp;newimage, int pixX, int pixY, int posX, int posY)</div><div class="ttdoc">Metodo que actualiza la imagen que se muestra.</div><div class="ttdef"><b>Definition</b> QFrame.cpp:90</div></div>
+<div class="ttc" id="aclass_q_frame_html_a9cbb18879392690472d2359388386d86"><div class="ttname"><a href="class_q_frame.html#a9cbb18879392690472d2359388386d86">QFrame::button6</a></div><div class="ttdeci">wxButton * button6</div><div class="ttdef"><b>Definition</b> QFrame.h:125</div></div>
+<div class="ttc" id="aclass_q_frame_html_a9feed1ede7c4543bdd286839e2d17a51"><div class="ttname"><a href="class_q_frame.html#a9feed1ede7c4543bdd286839e2d17a51">QFrame::UpdateQuestion</a></div><div class="ttdeci">void UpdateQuestion(const wxString &amp;Question, const wxString &amp;OpcionA, const wxString &amp;OpcionB, const wxString &amp;OpcionC, const wxString &amp;OpcionD, int posX, int posY)</div><div class="ttdoc">Metodo que se encarga de actualizar las preguntas y respuestas del quiz.</div><div class="ttdef"><b>Definition</b> QFrame.cpp:100</div></div>
+<div class="ttc" id="aclass_q_frame_html_aa2bc9d3504af2620c12b3aa7160b88f7"><div class="ttname"><a href="class_q_frame.html#aa2bc9d3504af2620c12b3aa7160b88f7">QFrame::button5</a></div><div class="ttdeci">wxButton * button5</div><div class="ttdef"><b>Definition</b> QFrame.h:120</div></div>
+<div class="ttc" id="aclass_q_frame_html_aa6986db260480ef220733ebd06b08949"><div class="ttname"><a href="class_q_frame.html#aa6986db260480ef220733ebd06b08949">QFrame::extra_text</a></div><div class="ttdeci">wxStaticText * extra_text</div><div class="ttdef"><b>Definition</b> QFrame.h:95</div></div>
+<div class="ttc" id="aclass_q_frame_html_abf3175703c7c3f746d37771f56023b27"><div class="ttname"><a href="class_q_frame.html#abf3175703c7c3f746d37771f56023b27">QFrame::UpdateExtraText</a></div><div class="ttdeci">void UpdateExtraText(const wxString &amp;text, int posX, int posY)</div><div class="ttdoc">Metodo que se encarga de indicar en pantalla si la respuesta es correcta o incorrecta.</div><div class="ttdef"><b>Definition</b> QFrame.cpp:113</div></div>
+<div class="ttc" id="aclass_q_frame_html_ac6ff820281c61a3faeeff26995a597e2"><div class="ttname"><a href="class_q_frame.html#ac6ff820281c61a3faeeff26995a597e2">QFrame::button3</a></div><div class="ttdeci">wxButton * button3</div><div class="ttdef"><b>Definition</b> QFrame.h:115</div></div>
+<div class="ttc" id="aclass_q_frame_html_add56fb0a21c54837ba071ab40f9ea53a"><div class="ttname"><a href="class_q_frame.html#add56fb0a21c54837ba071ab40f9ea53a">QFrame::buttonA</a></div><div class="ttdeci">wxCheckBox * buttonA</div><div class="ttdef"><b>Definition</b> QFrame.h:130</div></div>
+<div class="ttc" id="aclass_q_frame_html_aee692c74bf3c2b4d801d525fc7085be1"><div class="ttname"><a href="class_q_frame.html#aee692c74bf3c2b4d801d525fc7085be1">QFrame::buttonB</a></div><div class="ttdeci">wxCheckBox * buttonB</div><div class="ttdef"><b>Definition</b> QFrame.h:135</div></div>
+<div class="ttc" id="aclass_q_frame_html_af545deb38a63ebf79053a9f60d0601db"><div class="ttname"><a href="class_q_frame.html#af545deb38a63ebf79053a9f60d0601db">QFrame::buttonD</a></div><div class="ttdeci">wxCheckBox * buttonD</div><div class="ttdef"><b>Definition</b> QFrame.h:145</div></div>
+<div class="ttc" id="aclass_q_frame_html_afaee69b1681ffb8ae32f13f2ade6e3c5"><div class="ttname"><a href="class_q_frame.html#afaee69b1681ffb8ae32f13f2ade6e3c5">QFrame::ABCDClick</a></div><div class="ttdeci">void ABCDClick(wxCommandEvent &amp;event)</div><div class="ttdoc">Metodo que responde cuando el usuario selecciona alguna opcion: A, B, C o D e indica si la respuesta ...</div><div class="ttdef"><b>Definition</b> QFrame.cpp:323</div></div>
+<div class="ttc" id="aclass_q_frame_html_afec77b7bb308b98bd69e90f1ef3ef596"><div class="ttname"><a href="class_q_frame.html#afec77b7bb308b98bd69e90f1ef3ef596">QFrame::buttonC</a></div><div class="ttdeci">wxCheckBox * buttonC</div><div class="ttdef"><b>Definition</b> QFrame.h:140</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

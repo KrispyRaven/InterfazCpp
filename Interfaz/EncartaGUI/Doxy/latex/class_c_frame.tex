@@ -1,9 +1,18 @@
 \doxysection{Referencia de la clase CFrame}
 \hypertarget{class_c_frame}{}\label{class_c_frame}\index{CFrame@{CFrame}}
+
+
+Se hereda desde wx\+Frame para crear la ventana Secundaria.  
+
+
+
+
+{\ttfamily \#include $<$CFrame.\+h$>$}
+
 Diagrama de herencia de CFrame\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_c_frame}
+\includegraphics[height=3.000000cm]{class_c_frame}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Métodos públicos}
@@ -18,11 +27,32 @@ void \mbox{\hyperlink{class_c_frame_ae6eef94832463134a459608e66cc4d99}{Update\+T
 void \mbox{\hyperlink{class_c_frame_aa3743c577c836daeee539be70c876963}{Updateimage}} (const wx\+String \&newimage, int pixX, int pixY, int posX, int posY)
 \begin{DoxyCompactList}\small\item\em Metodo que actualiza la imagen que se muestra. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_c_frame_af156b7eb70ee37f491f0d0361d813603}{On\+Button\+Click}} (wx\+Command\+Event \&event)
-\begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado. \end{DoxyCompactList}\item 
-\Hypertarget{class_c_frame_ab51ebdc61c8cbffd16fdad34d4d1d5f9}\label{class_c_frame_ab51ebdc61c8cbffd16fdad34d4d1d5f9} 
-void {\bfseries Special\+Click} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Text \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a52d7762917a13d173ebc53a8a1011383}{m\+\_\+text\+Ctrl}}
+\item 
+wx\+Static\+Bitmap \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_af85d8cbb8a17988cfdf512db27a660fb}{image}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_ae8f47c472db7c28bb5fc57873a82d26e}{button1}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_aa3aa53964e60b83e63b8ff8530da8d56}{button2}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a54a5c764057277141dac328008d8a783}{button3}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a9365057e143c723982e9fd5d8526528d}{button4}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a7b8e60c6e10c61b6cc40db581b7d3487}{button5}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a987844248aa0d7d5b52c3e50f2ad0547}{button6}}
+\item 
+wx\+Panel \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a7287531130b6455ce0572c407761a0bd}{panel}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Descripción detallada}
+Se hereda desde wx\+Frame para crear la ventana Secundaria. 
 
 \doxysubsection{Documentación de constructores y destructores}
 \Hypertarget{class_c_frame_a2b9e283688643385de39e817d54ad435}\label{class_c_frame_a2b9e283688643385de39e817d54ad435} 
@@ -72,7 +102,7 @@ Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra.
 
 
 
-Metodo que nos reconoce el boton que se ha clickeado. 
+Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. 
 
 
 \begin{DoxyParams}{Parámetros}
@@ -121,7 +151,109 @@ Metodo que recibe un nuevo texto para ser modificado.
 \end{DoxyParams}
 
 
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_c_frame_ae8f47c472db7c28bb5fc57873a82d26e}\label{class_c_frame_ae8f47c472db7c28bb5fc57873a82d26e} 
+\index{CFrame@{CFrame}!button1@{button1}}
+\index{button1@{button1}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{button1}{button1}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} CFrame\+::button1}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em burron1} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_aa3aa53964e60b83e63b8ff8530da8d56}\label{class_c_frame_aa3aa53964e60b83e63b8ff8530da8d56} 
+\index{CFrame@{CFrame}!button2@{button2}}
+\index{button2@{button2}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{button2}{button2}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} CFrame\+::button2}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em burron1} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_a54a5c764057277141dac328008d8a783}\label{class_c_frame_a54a5c764057277141dac328008d8a783} 
+\index{CFrame@{CFrame}!button3@{button3}}
+\index{button3@{button3}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{button3}{button3}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} CFrame\+::button3}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em burron1} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_a9365057e143c723982e9fd5d8526528d}\label{class_c_frame_a9365057e143c723982e9fd5d8526528d} 
+\index{CFrame@{CFrame}!button4@{button4}}
+\index{button4@{button4}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{button4}{button4}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} CFrame\+::button4}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em burron1} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_a7b8e60c6e10c61b6cc40db581b7d3487}\label{class_c_frame_a7b8e60c6e10c61b6cc40db581b7d3487} 
+\index{CFrame@{CFrame}!button5@{button5}}
+\index{button5@{button5}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{button5}{button5}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} CFrame\+::button5}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em burron1} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_a987844248aa0d7d5b52c3e50f2ad0547}\label{class_c_frame_a987844248aa0d7d5b52c3e50f2ad0547} 
+\index{CFrame@{CFrame}!button6@{button6}}
+\index{button6@{button6}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{button6}{button6}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} CFrame\+::button6}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em burron1} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_af85d8cbb8a17988cfdf512db27a660fb}\label{class_c_frame_af85d8cbb8a17988cfdf512db27a660fb} 
+\index{CFrame@{CFrame}!image@{image}}
+\index{image@{image}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily wx\+Static\+Bitmap\texorpdfstring{$\ast$}{*} CFrame\+::image}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em image} & Objeto de la imagen que se muestra \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_a52d7762917a13d173ebc53a8a1011383}\label{class_c_frame_a52d7762917a13d173ebc53a8a1011383} 
+\index{CFrame@{CFrame}!m\_textCtrl@{m\_textCtrl}}
+\index{m\_textCtrl@{m\_textCtrl}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{m\_textCtrl}{m\_textCtrl}}
+{\footnotesize\ttfamily wx\+Static\+Text\texorpdfstring{$\ast$}{*} CFrame\+::m\+\_\+text\+Ctrl}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em m\+\_\+text\+Ctrl} & Es un control de texto estatico no copiable por el usuario \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_frame_a7287531130b6455ce0572c407761a0bd}\label{class_c_frame_a7287531130b6455ce0572c407761a0bd} 
+\index{CFrame@{CFrame}!panel@{panel}}
+\index{panel@{panel}!CFrame@{CFrame}}
+\doxysubsubsection{\texorpdfstring{panel}{panel}}
+{\footnotesize\ttfamily wx\+Panel\texorpdfstring{$\ast$}{*} CFrame\+::panel}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em panel} & Objeto del tipo wx\+Panel que referencia nuestro panel \\
+\hline
+\end{DoxyParams}
+
+
 La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
 \item 
-CFrame.\+h\item 
-CFrame.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_c_frame_8h}{CFrame.\+h}}\item 
+\mbox{\hyperlink{_c_frame_8cpp}{CFrame.\+cpp}}\end{DoxyCompactItemize}

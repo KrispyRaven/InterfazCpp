@@ -79,14 +79,14 @@ QFrame::QFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
 
 
 
-// Se define el metodo para cerrar la ventana hija
+
 void QFrame::CloseClicked(wxCommandEvent& evt) {
     wxCommandEvent closeEvent(wxEVT_QFRAME_CLOSED);
     wxPostEvent(this, closeEvent);
     Close();
 }
 
-// Metodo que se encarga de actualizar la imagen del objeto image creado en el constructor
+
 void QFrame::Updateimage(const wxString& newimage, int pixX, int pixY, int posX, int posY) {
     image->SetBitmap(wxBitmap(newimage, wxBITMAP_TYPE_PNG));
     image->SetPosition(wxPoint(posX, posY));
@@ -95,7 +95,8 @@ void QFrame::Updateimage(const wxString& newimage, int pixX, int pixY, int posX,
 
 
 
-// Los siguientes dos metodos son llamados para actualizar el valor de los objetos: m_textCtrl y extra_text
+
+
 void QFrame::UpdateQuestion(const wxString& Question, const wxString& OpcionA, const wxString& OpcionB, const wxString& OpcionC, const wxString& OpcionD, int posX, int posY)
 {   // Creamos un objeto para definir el tamaño de letra, la familia de estilos, tipo de letra, grosor de la letra
     wxFont fonti(11, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRAHEAVY);
@@ -318,7 +319,7 @@ void QFrame::OnButtonClick(wxCommandEvent& event)
 
 
 
-// Se define el metodo que responde cuando el usuario selecciona alguna opcion: A, B, C o D
+
 void QFrame::ABCDClick(wxCommandEvent& event)
 {
    

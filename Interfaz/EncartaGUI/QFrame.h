@@ -48,7 +48,16 @@ public:
 	*/
 	void Updateimage(const wxString& newimage, int pixX, int pixY, int posX, int posY);
 
-
+	/**
+	* @brief Metodo que se encarga de actualizar las preguntas y respuestas del quiz
+	* @param Question Recibe la pregunta a actualizar
+	* @param OpcionA Recibe la posible respuesta A
+	* @param OpcionB Recibe la posible respuesta B
+	* @param OpcionC Recibe la posible respuesta C
+	* @param OpcionD Recibe la posible respuesta D
+	* @param posX Recibe la posicion en el eje x de la pregunta
+	* @param posY Recibe la posicion en el eje Y de la pregunta
+	*/
 	void UpdateQuestion(const wxString& Question, const wxString& OpcionA, const wxString& OpcionB, const wxString& OpcionC, const wxString& OpcionD, int posX, int posY);
 	
 	/**
@@ -147,5 +156,8 @@ public:
 */ 
 extern int e;
 
+/**
+* @param temita Variable de control para conocer en que tema se esta y que preguntas se deben mostrar, junto on sus posibles respuestas
+*/
 extern string temita;
 

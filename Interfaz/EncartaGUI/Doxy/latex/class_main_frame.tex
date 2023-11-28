@@ -1,5 +1,14 @@
 \doxysection{Referencia de la clase Main\+Frame}
 \hypertarget{class_main_frame}{}\label{class_main_frame}\index{MainFrame@{MainFrame}}
+
+
+Se hereda desde wx\+Frame para crear la ventana principal.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Frame.\+h$>$}
+
 Diagrama de herencia de Main\+Frame\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,8 +19,32 @@ Diagrama de herencia de Main\+Frame\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_main_frame_a59ccb07a4ab243aafd9caa1fa4368114}{Main\+Frame}} (const wx\+String \&tittle)
-\begin{DoxyCompactList}\small\item\em Llamada del metodo constructor de la ventana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Llamada del metodo constructor de la ventana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_frame_a4cea5827e231dd3da2a34eef59f7877a}{On\+Open\+New\+Frame1}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_c_frame}{CFrame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_frame_a2607f2ed879cca41a032ff561fa3dfbc}{On\+Open\+New\+Frame2}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_o_o_p}{OOP}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_frame_a570b79051c2bafeaf3ef705dbc443637}{On\+Open\+New\+Frame3}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_e_frame}{EFrame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_frame_ad417402e35b4f98a23214ee5f538219f}{On\+Exit\+Button\+Click}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo encargado de cerrar la ventana principal y todas sus dependencias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_frame_a15f388a2d2e5128082df78beae45222f}{On\+Open\+New\+Frame4}} (wx\+Command\+Event \&event)
+\item 
+void \mbox{\hyperlink{class_main_frame_af4f91965039450fcf03519d4059ed742}{On\+QFrame\+Closed}} (wx\+Command\+Event \&event)
+\item 
+void \mbox{\hyperlink{class_main_frame_a98656d6637697977124c7c94ca76412f}{On\+CFrame\+Closed}} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Text \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a7dc7d8b56bf726462324bbe1eab15929}{main\+\_\+text}}
+\item 
+wx\+Static\+Bitmap \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a6df90bc7cabce750df35dce737d62012}{image}}
+\end{DoxyCompactItemize}
 
+
+\doxysubsection{Descripción detallada}
+Se hereda desde wx\+Frame para crear la ventana principal. 
 
 \doxysubsection{Documentación de constructores y destructores}
 \Hypertarget{class_main_frame_a59ccb07a4ab243aafd9caa1fa4368114}\label{class_main_frame_a59ccb07a4ab243aafd9caa1fa4368114} 
@@ -31,7 +64,108 @@ Llamada del metodo constructor de la ventana.
 \end{DoxyParams}
 
 
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_main_frame_a98656d6637697977124c7c94ca76412f}\label{class_main_frame_a98656d6637697977124c7c94ca76412f} 
+\index{MainFrame@{MainFrame}!OnCFrameClosed@{OnCFrameClosed}}
+\index{OnCFrameClosed@{OnCFrameClosed}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnCFrameClosed()}{OnCFrameClosed()}}
+{\footnotesize\ttfamily void Main\+Frame\+::\+On\+CFrame\+Closed (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+\Hypertarget{class_main_frame_ad417402e35b4f98a23214ee5f538219f}\label{class_main_frame_ad417402e35b4f98a23214ee5f538219f} 
+\index{MainFrame@{MainFrame}!OnExitButtonClick@{OnExitButtonClick}}
+\index{OnExitButtonClick@{OnExitButtonClick}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnExitButtonClick()}{OnExitButtonClick()}}
+{\footnotesize\ttfamily void Main\+Frame\+::\+On\+Exit\+Button\+Click (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo encargado de cerrar la ventana principal y todas sus dependencias. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_frame_a4cea5827e231dd3da2a34eef59f7877a}\label{class_main_frame_a4cea5827e231dd3da2a34eef59f7877a} 
+\index{MainFrame@{MainFrame}!OnOpenNewFrame1@{OnOpenNewFrame1}}
+\index{OnOpenNewFrame1@{OnOpenNewFrame1}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnOpenNewFrame1()}{OnOpenNewFrame1()}}
+{\footnotesize\ttfamily void Main\+Frame\+::\+On\+Open\+New\+Frame1 (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_c_frame}{CFrame}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_frame_a2607f2ed879cca41a032ff561fa3dfbc}\label{class_main_frame_a2607f2ed879cca41a032ff561fa3dfbc} 
+\index{MainFrame@{MainFrame}!OnOpenNewFrame2@{OnOpenNewFrame2}}
+\index{OnOpenNewFrame2@{OnOpenNewFrame2}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnOpenNewFrame2()}{OnOpenNewFrame2()}}
+{\footnotesize\ttfamily void Main\+Frame\+::\+On\+Open\+New\+Frame2 (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_o_o_p}{OOP}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_frame_a570b79051c2bafeaf3ef705dbc443637}\label{class_main_frame_a570b79051c2bafeaf3ef705dbc443637} 
+\index{MainFrame@{MainFrame}!OnOpenNewFrame3@{OnOpenNewFrame3}}
+\index{OnOpenNewFrame3@{OnOpenNewFrame3}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnOpenNewFrame3()}{OnOpenNewFrame3()}}
+{\footnotesize\ttfamily void Main\+Frame\+::\+On\+Open\+New\+Frame3 (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_e_frame}{EFrame}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_frame_a15f388a2d2e5128082df78beae45222f}\label{class_main_frame_a15f388a2d2e5128082df78beae45222f} 
+\index{MainFrame@{MainFrame}!OnOpenNewFrame4@{OnOpenNewFrame4}}
+\index{OnOpenNewFrame4@{OnOpenNewFrame4}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnOpenNewFrame4()}{OnOpenNewFrame4()}}
+{\footnotesize\ttfamily void Main\+Frame\+::\+On\+Open\+New\+Frame4 (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+\Hypertarget{class_main_frame_af4f91965039450fcf03519d4059ed742}\label{class_main_frame_af4f91965039450fcf03519d4059ed742} 
+\index{MainFrame@{MainFrame}!OnQFrameClosed@{OnQFrameClosed}}
+\index{OnQFrameClosed@{OnQFrameClosed}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnQFrameClosed()}{OnQFrameClosed()}}
+{\footnotesize\ttfamily void Main\+Frame\+::\+On\+QFrame\+Closed (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_main_frame_a6df90bc7cabce750df35dce737d62012}\label{class_main_frame_a6df90bc7cabce750df35dce737d62012} 
+\index{MainFrame@{MainFrame}!image@{image}}
+\index{image@{image}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily wx\+Static\+Bitmap\texorpdfstring{$\ast$}{*} Main\+Frame\+::image}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em image} & Objeto de la imagen que se muestra \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_frame_a7dc7d8b56bf726462324bbe1eab15929}\label{class_main_frame_a7dc7d8b56bf726462324bbe1eab15929} 
+\index{MainFrame@{MainFrame}!main\_text@{main\_text}}
+\index{main\_text@{main\_text}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{main\_text}{main\_text}}
+{\footnotesize\ttfamily wx\+Static\+Text\texorpdfstring{$\ast$}{*} Main\+Frame\+::main\+\_\+text}
+
+
+
 La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
 \item 
-Main\+Frame.\+h\item 
-Main\+Frame.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_main_frame_8h}{Main\+Frame.\+h}}\item 
+\mbox{\hyperlink{_main_frame_8cpp}{Main\+Frame.\+cpp}}\end{DoxyCompactItemize}

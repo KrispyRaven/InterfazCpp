@@ -1,29 +1,110 @@
 \doxysection{Referencia de la clase EFrame}
 \hypertarget{class_e_frame}{}\label{class_e_frame}\index{EFrame@{EFrame}}
+
+
+Clase que se hereda desde \doxylink{class_c_frame}{CFrame} para crear la ventana Secundaria.  
+
+
+
+
+{\ttfamily \#include $<$EFrame.\+h$>$}
+
 Diagrama de herencia de EFrame\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_e_frame}
+\includegraphics[height=3.000000cm]{class_e_frame}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_e_frame_a4a2931136806e61c7257e3288def3023}\label{class_e_frame_a4a2931136806e61c7257e3288def3023} 
-{\bfseries EFrame} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\mbox{\hyperlink{class_e_frame_a4a2931136806e61c7257e3288def3023}{EFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\begin{DoxyCompactList}\small\item\em Metodo Constructor de la clase \doxylink{class_e_frame}{EFrame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_frame_a9992165af509ff5d5cbfb5a6b4329ee6}{On\+Button\+Click1}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos heredados de \mbox{\hyperlink{class_c_frame}{CFrame}}}
+\begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_e_frame_a63578c4d4b90243981c75a158d65592a}\label{class_e_frame_a63578c4d4b90243981c75a158d65592a} 
-void {\bfseries Close\+Clicked} (wx\+Command\+Event \&evt)
+\mbox{\hyperlink{class_c_frame_a2b9e283688643385de39e817d54ad435}{CFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\begin{DoxyCompactList}\small\item\em Metodo Constructor de la clase \doxylink{class_c_frame}{CFrame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_frame_ad62ae8c5d5f95a344bb220400fc4d22c}{Close\+Clicked}} (wx\+Command\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_frame_ae6eef94832463134a459608e66cc4d99}{Update\+Text}} (const wx\+String \&new\+Text)
+\begin{DoxyCompactList}\small\item\em Metodo que recibe un nuevo texto para ser modificado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_frame_aa3743c577c836daeee539be70c876963}{Updateimage}} (const wx\+String \&newimage, int pixX, int pixY, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Metodo que actualiza la imagen que se muestra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_frame_af156b7eb70ee37f491f0d0361d813603}{On\+Button\+Click}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{class_c_frame}{CFrame}}}
+\begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_e_frame_a6e035a49f5dd13ee77b5cb0f1b054a29}\label{class_e_frame_a6e035a49f5dd13ee77b5cb0f1b054a29} 
-void {\bfseries Update\+Text} (const wx\+String \&new\+Text)
+wx\+Static\+Text \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a52d7762917a13d173ebc53a8a1011383}{m\+\_\+text\+Ctrl}}
 \item 
-\Hypertarget{class_e_frame_a2e11c0e525377287514122fa4ab13c07}\label{class_e_frame_a2e11c0e525377287514122fa4ab13c07} 
-void {\bfseries On\+Button\+Click} (wx\+Command\+Event \&event)
+wx\+Static\+Bitmap \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_af85d8cbb8a17988cfdf512db27a660fb}{image}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_ae8f47c472db7c28bb5fc57873a82d26e}{button1}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_aa3aa53964e60b83e63b8ff8530da8d56}{button2}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a54a5c764057277141dac328008d8a783}{button3}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a9365057e143c723982e9fd5d8526528d}{button4}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a7b8e60c6e10c61b6cc40db581b7d3487}{button5}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a987844248aa0d7d5b52c3e50f2ad0547}{button6}}
+\item 
+wx\+Panel \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a7287531130b6455ce0572c407761a0bd}{panel}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase que se hereda desde \doxylink{class_c_frame}{CFrame} para crear la ventana Secundaria. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_e_frame_a4a2931136806e61c7257e3288def3023}\label{class_e_frame_a4a2931136806e61c7257e3288def3023} 
+\index{EFrame@{EFrame}!EFrame@{EFrame}}
+\index{EFrame@{EFrame}!EFrame@{EFrame}}
+\doxysubsubsection{\texorpdfstring{EFrame()}{EFrame()}}
+{\footnotesize\ttfamily EFrame\+::\+EFrame (\begin{DoxyParamCaption}\item[{wx\+Frame \texorpdfstring{$\ast$}{*}}]{parent,  }\item[{const wx\+String \&}]{title,  }\item[{const wx\+Point \&}]{pos,  }\item[{const wx\+Size \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Metodo Constructor de la clase \doxylink{class_e_frame}{EFrame}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em parent} & Puntero que se debe recibir para indicar la ventana padre \\
+\hline
+{\em tittle} & {\ucr}tittle{\ucr} se encarga de generarnos el titulo de nuestra ventana \\
+\hline
+{\em pos} & "{}pos"{} nos define la posicion de nuestra ventana \\
+\hline
+{\em size} & "{}size"{} nos define el tama{\ucr}o de nuestra ventana \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_e_frame_a9992165af509ff5d5cbfb5a6b4329ee6}\label{class_e_frame_a9992165af509ff5d5cbfb5a6b4329ee6} 
+\index{EFrame@{EFrame}!OnButtonClick1@{OnButtonClick1}}
+\index{OnButtonClick1@{OnButtonClick1}!EFrame@{EFrame}}
+\doxysubsubsection{\texorpdfstring{OnButtonClick1()}{OnButtonClick1()}}
+{\footnotesize\ttfamily void EFrame\+::\+On\+Button\+Click1 (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci{\ucr}n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
 
 
 La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
 \item 
-EFrame.\+h\item 
-EFrame.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{_e_frame_8h}{EFrame.\+h}}\item 
+\mbox{\hyperlink{_e_frame_8cpp}{EFrame.\+cpp}}\end{DoxyCompactItemize}

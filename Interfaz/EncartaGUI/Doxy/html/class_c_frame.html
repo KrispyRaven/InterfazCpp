@@ -21,9 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Encarta<span id="projectnumber">&#160;0.0</span>
+   <div id="projectname">Encarta<span id="projectnumber">&#160;3.1</span>
    </div>
-   <div id="projectbrief">Encarta para concer acerca c++</div>
+   <div id="projectbrief">Enseñansa de c++</div>
   </td>
  </tr>
  </tbody>
@@ -72,21 +72,31 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pub-attribs">Atributos públicos</a> &#124;
 <a href="class_c_frame-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle"><div class="title">Referencia de la clase CFrame</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Se hereda desde wxFrame para crear la ventana Secundaria.  
+ <a href="class_c_frame.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_c_frame_8h_source.html">CFrame.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencia de CFrame</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_c_frame.png" alt=""/>
- </div></div>
+  <img src="class_c_frame.png" usemap="#CFrame_map" alt=""/>
+  <map id="CFrame_map" name="CFrame_map">
+<area href="class_e_frame.html" title="Clase que se hereda desde CFrame para crear la ventana Secundaria." alt="EFrame" shape="rect" coords="0,112,63,136"/>
+<area href="class_o_o_p.html" title="Clase que se hereda desde CFrame para crear la ventana Secundaria." alt="OOP" shape="rect" coords="73,112,136,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:a2b9e283688643385de39e817d54ad435" id="r_a2b9e283688643385de39e817d54ad435"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#a2b9e283688643385de39e817d54ad435">CFrame</a> (wxFrame *parent, const wxString &amp;title, const wxPoint &amp;pos, const wxSize &amp;size)</td></tr>
-<tr class="memdesc:a2b9e283688643385de39e817d54ad435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo Constructor de la clase <a class="el" href="class_c_frame.html">CFrame</a>.  <br /></td></tr>
+<tr class="memdesc:a2b9e283688643385de39e817d54ad435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo Constructor de la clase <a class="el" href="class_c_frame.html" title="Se hereda desde wxFrame para crear la ventana Secundaria.">CFrame</a>.  <br /></td></tr>
 <tr class="separator:a2b9e283688643385de39e817d54ad435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad62ae8c5d5f95a344bb220400fc4d22c" id="r_ad62ae8c5d5f95a344bb220400fc4d22c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#ad62ae8c5d5f95a344bb220400fc4d22c">CloseClicked</a> (wxCommandEvent &amp;evt)</td></tr>
 <tr class="memdesc:ad62ae8c5d5f95a344bb220400fc4d22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra.  <br /></td></tr>
@@ -98,13 +108,33 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:aa3743c577c836daeee539be70c876963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que actualiza la imagen que se muestra.  <br /></td></tr>
 <tr class="separator:aa3743c577c836daeee539be70c876963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af156b7eb70ee37f491f0d0361d813603" id="r_af156b7eb70ee37f491f0d0361d813603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#af156b7eb70ee37f491f0d0361d813603">OnButtonClick</a> (wxCommandEvent &amp;event)</td></tr>
-<tr class="memdesc:af156b7eb70ee37f491f0d0361d813603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que nos reconoce el boton que se ha clickeado.  <br /></td></tr>
+<tr class="memdesc:af156b7eb70ee37f491f0d0361d813603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado.  <br /></td></tr>
 <tr class="separator:af156b7eb70ee37f491f0d0361d813603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab51ebdc61c8cbffd16fdad34d4d1d5f9" id="r_ab51ebdc61c8cbffd16fdad34d4d1d5f9"><td class="memItemLeft" align="right" valign="top"><a id="ab51ebdc61c8cbffd16fdad34d4d1d5f9" name="ab51ebdc61c8cbffd16fdad34d4d1d5f9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SpecialClick</b> (wxCommandEvent &amp;event)</td></tr>
-<tr class="separator:ab51ebdc61c8cbffd16fdad34d4d1d5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atributos públicos</h2></td></tr>
+<tr class="memitem:a52d7762917a13d173ebc53a8a1011383" id="r_a52d7762917a13d173ebc53a8a1011383"><td class="memItemLeft" align="right" valign="top">wxStaticText *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#a52d7762917a13d173ebc53a8a1011383">m_textCtrl</a></td></tr>
+<tr class="separator:a52d7762917a13d173ebc53a8a1011383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85d8cbb8a17988cfdf512db27a660fb" id="r_af85d8cbb8a17988cfdf512db27a660fb"><td class="memItemLeft" align="right" valign="top">wxStaticBitmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#af85d8cbb8a17988cfdf512db27a660fb">image</a></td></tr>
+<tr class="separator:af85d8cbb8a17988cfdf512db27a660fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f47c472db7c28bb5fc57873a82d26e" id="r_ae8f47c472db7c28bb5fc57873a82d26e"><td class="memItemLeft" align="right" valign="top">wxButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#ae8f47c472db7c28bb5fc57873a82d26e">button1</a></td></tr>
+<tr class="separator:ae8f47c472db7c28bb5fc57873a82d26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3aa53964e60b83e63b8ff8530da8d56" id="r_aa3aa53964e60b83e63b8ff8530da8d56"><td class="memItemLeft" align="right" valign="top">wxButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#aa3aa53964e60b83e63b8ff8530da8d56">button2</a></td></tr>
+<tr class="separator:aa3aa53964e60b83e63b8ff8530da8d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a5c764057277141dac328008d8a783" id="r_a54a5c764057277141dac328008d8a783"><td class="memItemLeft" align="right" valign="top">wxButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#a54a5c764057277141dac328008d8a783">button3</a></td></tr>
+<tr class="separator:a54a5c764057277141dac328008d8a783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9365057e143c723982e9fd5d8526528d" id="r_a9365057e143c723982e9fd5d8526528d"><td class="memItemLeft" align="right" valign="top">wxButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#a9365057e143c723982e9fd5d8526528d">button4</a></td></tr>
+<tr class="separator:a9365057e143c723982e9fd5d8526528d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8e60c6e10c61b6cc40db581b7d3487" id="r_a7b8e60c6e10c61b6cc40db581b7d3487"><td class="memItemLeft" align="right" valign="top">wxButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#a7b8e60c6e10c61b6cc40db581b7d3487">button5</a></td></tr>
+<tr class="separator:a7b8e60c6e10c61b6cc40db581b7d3487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987844248aa0d7d5b52c3e50f2ad0547" id="r_a987844248aa0d7d5b52c3e50f2ad0547"><td class="memItemLeft" align="right" valign="top">wxButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#a987844248aa0d7d5b52c3e50f2ad0547">button6</a></td></tr>
+<tr class="separator:a987844248aa0d7d5b52c3e50f2ad0547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7287531130b6455ce0572c407761a0bd" id="r_a7287531130b6455ce0572c407761a0bd"><td class="memItemLeft" align="right" valign="top">wxPanel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_frame.html#a7287531130b6455ce0572c407761a0bd">panel</a></td></tr>
+<tr class="separator:a7287531130b6455ce0572c407761a0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Se hereda desde wxFrame para crear la ventana Secundaria. </p>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
 <a id="a2b9e283688643385de39e817d54ad435" name="a2b9e283688643385de39e817d54ad435"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b9e283688643385de39e817d54ad435">&#9670;&#160;</a></span>CFrame()</h2>
 
@@ -143,7 +173,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SpecialClick</b> (wxC
       </table>
 </div><div class="memdoc">
 
-<p>Metodo Constructor de la clase <a class="el" href="class_c_frame.html">CFrame</a>. </p>
+<p>Metodo Constructor de la clase <a class="el" href="class_c_frame.html" title="Se hereda desde wxFrame para crear la ventana Secundaria.">CFrame</a>. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td>Puntero que se debe recibir para indicar la ventana padre </td></tr>
@@ -199,7 +229,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SpecialClick</b> (wxC
       </table>
 </div><div class="memdoc">
 
-<p>Metodo que nos reconoce el boton que se ha clickeado. </p>
+<p>Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>recibe un objeto wxCommandEvent&amp; como argumento. Este objeto wxCommandEvent contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. </td></tr>
@@ -294,9 +324,190 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SpecialClick</b> (wxC
 
 </div>
 </div>
+<h2 class="groupheader">Documentación de datos miembro</h2>
+<a id="ae8f47c472db7c28bb5fc57873a82d26e" name="ae8f47c472db7c28bb5fc57873a82d26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8f47c472db7c28bb5fc57873a82d26e">&#9670;&#160;</a></span>button1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxButton* CFrame::button1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">burron1</td><td>Objeto del tipo Boton </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa3aa53964e60b83e63b8ff8530da8d56" name="aa3aa53964e60b83e63b8ff8530da8d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3aa53964e60b83e63b8ff8530da8d56">&#9670;&#160;</a></span>button2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxButton* CFrame::button2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">burron1</td><td>Objeto del tipo Boton </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a54a5c764057277141dac328008d8a783" name="a54a5c764057277141dac328008d8a783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a5c764057277141dac328008d8a783">&#9670;&#160;</a></span>button3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxButton* CFrame::button3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">burron1</td><td>Objeto del tipo Boton </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9365057e143c723982e9fd5d8526528d" name="a9365057e143c723982e9fd5d8526528d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9365057e143c723982e9fd5d8526528d">&#9670;&#160;</a></span>button4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxButton* CFrame::button4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">burron1</td><td>Objeto del tipo Boton </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b8e60c6e10c61b6cc40db581b7d3487" name="a7b8e60c6e10c61b6cc40db581b7d3487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8e60c6e10c61b6cc40db581b7d3487">&#9670;&#160;</a></span>button5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxButton* CFrame::button5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">burron1</td><td>Objeto del tipo Boton </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a987844248aa0d7d5b52c3e50f2ad0547" name="a987844248aa0d7d5b52c3e50f2ad0547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a987844248aa0d7d5b52c3e50f2ad0547">&#9670;&#160;</a></span>button6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxButton* CFrame::button6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">burron1</td><td>Objeto del tipo Boton </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af85d8cbb8a17988cfdf512db27a660fb" name="af85d8cbb8a17988cfdf512db27a660fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85d8cbb8a17988cfdf512db27a660fb">&#9670;&#160;</a></span>image</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxStaticBitmap* CFrame::image</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Objeto de la imagen que se muestra </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a52d7762917a13d173ebc53a8a1011383" name="a52d7762917a13d173ebc53a8a1011383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d7762917a13d173ebc53a8a1011383">&#9670;&#160;</a></span>m_textCtrl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxStaticText* CFrame::m_textCtrl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m_textCtrl</td><td>Es un control de texto estatico no copiable por el usuario </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7287531130b6455ce0572c407761a0bd" name="a7287531130b6455ce0572c407761a0bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7287531130b6455ce0572c407761a0bd">&#9670;&#160;</a></span>panel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxPanel* CFrame::panel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">panel</td><td>Objeto del tipo wxPanel que referencia nuestro panel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
 <li><a class="el" href="_c_frame_8h_source.html">CFrame.h</a></li>
-<li><b>CFrame.cpp</b></li>
+<li><a class="el" href="_c_frame_8cpp.html">CFrame.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

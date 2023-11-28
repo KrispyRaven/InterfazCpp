@@ -1,0 +1,361 @@
+\doxysection{Referencia de la clase QFrame}
+\hypertarget{class_q_frame}{}\label{class_q_frame}\index{QFrame@{QFrame}}
+
+
+Clase creadora de la ventana de quiz, hereda de wx\+Frame.  
+
+
+
+
+{\ttfamily \#include $<$QFrame.\+h$>$}
+
+Diagrama de herencia de QFrame\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_frame}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_frame_a5fdda37711d474c78423e31c6e81fde0}{QFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\begin{DoxyCompactList}\small\item\em Metodo constructor de la clase \doxylink{class_q_frame}{QFrame}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_frame_a40282458939f9c72fa9058e1494280f4}{Close\+Clicked}} (wx\+Command\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_frame_a94e783b9b7ad8df9cff0f0b8f1df08ea}{Updateimage}} (const wx\+String \&newimage, int pixX, int pixY, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Metodo que actualiza la imagen que se muestra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_frame_a9feed1ede7c4543bdd286839e2d17a51}{Update\+Question}} (const wx\+String \&Question, const wx\+String \&OpcionA, const wx\+String \&OpcionB, const wx\+String \&OpcionC, const wx\+String \&OpcionD, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Metodo que se encarga de actualizar las preguntas y respuestas del quiz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_frame_abf3175703c7c3f746d37771f56023b27}{Update\+Extra\+Text}} (const wx\+String \&text, int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Metodo que se encarga de indicar en pantalla si la respuesta es correcta o incorrecta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_frame_a518e4fe6979dc917cff5c0178cb730f6}{On\+Button\+Click}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_frame_afaee69b1681ffb8ae32f13f2ade6e3c5}{ABCDClick}} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Metodo que responde cuando el usuario selecciona alguna opcion\+: A, B, C o D e indica si la respuesta es correcta o incorrecta. Esto empleando el metodo "{}update\+Extra\+Text"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Text \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_a481ad7ea490f793d37124462479256b5}{m\+\_\+text\+Ctrl}}
+\item 
+wx\+Static\+Text \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_aa6986db260480ef220733ebd06b08949}{extra\+\_\+text}}
+\item 
+wx\+Static\+Bitmap \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_a8958be9af5a32a80fd912c68772feab6}{image}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_a22f7f5f353b5031e67fd8436f83e2930}{button1}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_a9264a0cd7893aff006a9f92f63889a78}{button2}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_ac6ff820281c61a3faeeff26995a597e2}{button3}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_aa2bc9d3504af2620c12b3aa7160b88f7}{button5}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_a9cbb18879392690472d2359388386d86}{button6}}
+\item 
+wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_add56fb0a21c54837ba071ab40f9ea53a}{buttonA}}
+\item 
+wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_aee692c74bf3c2b4d801d525fc7085be1}{buttonB}}
+\item 
+wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_afec77b7bb308b98bd69e90f1ef3ef596}{buttonC}}
+\item 
+wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_af545deb38a63ebf79053a9f60d0601db}{buttonD}}
+\item 
+wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_a37a4c3503afec1a097fb5461f42c14d9}{past\+Button}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase creadora de la ventana de quiz, hereda de wx\+Frame. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_q_frame_a5fdda37711d474c78423e31c6e81fde0}\label{class_q_frame_a5fdda37711d474c78423e31c6e81fde0} 
+\index{QFrame@{QFrame}!QFrame@{QFrame}}
+\index{QFrame@{QFrame}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{QFrame()}{QFrame()}}
+{\footnotesize\ttfamily QFrame\+::\+QFrame (\begin{DoxyParamCaption}\item[{wx\+Frame \texorpdfstring{$\ast$}{*}}]{parent,  }\item[{const wx\+String \&}]{title,  }\item[{const wx\+Point \&}]{pos,  }\item[{const wx\+Size \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Metodo constructor de la clase \doxylink{class_q_frame}{QFrame}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em parent} & puntero obligatorio de la ventana padre \\
+\hline
+{\em tittle} & Titulo de la ventana \\
+\hline
+{\em pos} & cordenadas de tipo wx\+Point \\
+\hline
+{\em size} & Tamaño de la ventana de tipo wx\+Size \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_q_frame_afaee69b1681ffb8ae32f13f2ade6e3c5}\label{class_q_frame_afaee69b1681ffb8ae32f13f2ade6e3c5} 
+\index{QFrame@{QFrame}!ABCDClick@{ABCDClick}}
+\index{ABCDClick@{ABCDClick}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{ABCDClick()}{ABCDClick()}}
+{\footnotesize\ttfamily void QFrame\+::\+ABCDClick (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo que responde cuando el usuario selecciona alguna opcion\+: A, B, C o D e indica si la respuesta es correcta o incorrecta. Esto empleando el metodo "{}update\+Extra\+Text"{}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & Recibe el evento de la checkbox \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a40282458939f9c72fa9058e1494280f4}\label{class_q_frame_a40282458939f9c72fa9058e1494280f4} 
+\index{QFrame@{QFrame}!CloseClicked@{CloseClicked}}
+\index{CloseClicked@{CloseClicked}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{CloseClicked()}{CloseClicked()}}
+{\footnotesize\ttfamily void QFrame\+::\+Close\+Clicked (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+
+
+Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci{\ucr}n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a518e4fe6979dc917cff5c0178cb730f6}\label{class_q_frame_a518e4fe6979dc917cff5c0178cb730f6} 
+\index{QFrame@{QFrame}!OnButtonClick@{OnButtonClick}}
+\index{OnButtonClick@{OnButtonClick}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{OnButtonClick()}{OnButtonClick()}}
+{\footnotesize\ttfamily void QFrame\+::\+On\+Button\+Click (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci{\ucr}n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_abf3175703c7c3f746d37771f56023b27}\label{class_q_frame_abf3175703c7c3f746d37771f56023b27} 
+\index{QFrame@{QFrame}!UpdateExtraText@{UpdateExtraText}}
+\index{UpdateExtraText@{UpdateExtraText}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{UpdateExtraText()}{UpdateExtraText()}}
+{\footnotesize\ttfamily void QFrame\+::\+Update\+Extra\+Text (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{text,  }\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})}
+
+
+
+Metodo que se encarga de indicar en pantalla si la respuesta es correcta o incorrecta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em text} & Texto quue indica si la respuesta es correcta o incorrecta \\
+\hline
+{\em posX} & Posicion en el eje x del texto \\
+\hline
+{\em posY} & Posicion en el eje y del texto \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a94e783b9b7ad8df9cff0f0b8f1df08ea}\label{class_q_frame_a94e783b9b7ad8df9cff0f0b8f1df08ea} 
+\index{QFrame@{QFrame}!Updateimage@{Updateimage}}
+\index{Updateimage@{Updateimage}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{Updateimage()}{Updateimage()}}
+{\footnotesize\ttfamily void QFrame\+::\+Updateimage (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{newimage,  }\item[{int}]{pixX,  }\item[{int}]{pixY,  }\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})}
+
+
+
+Metodo que actualiza la imagen que se muestra. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em newimage} & Recibe el nombre/ubicacion de la imagen \\
+\hline
+{\em pixX} & Recibe el tamaño en pixeles del eje x \\
+\hline
+{\em pixY} & Recibe el tamaño en pixeles del eje x\texorpdfstring{$\ast$}{*}\\
+\hline
+{\em pixX} & Recibe el tamaño en pixeles del eje y \\
+\hline
+{\em posX} & Recibe la posicion en el eje x de la imagen \\
+\hline
+{\em posY} & Recibe la posicion en el eje Y de la imagen \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a9feed1ede7c4543bdd286839e2d17a51}\label{class_q_frame_a9feed1ede7c4543bdd286839e2d17a51} 
+\index{QFrame@{QFrame}!UpdateQuestion@{UpdateQuestion}}
+\index{UpdateQuestion@{UpdateQuestion}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{UpdateQuestion()}{UpdateQuestion()}}
+{\footnotesize\ttfamily void QFrame\+::\+Update\+Question (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{Question,  }\item[{const wx\+String \&}]{OpcionA,  }\item[{const wx\+String \&}]{OpcionB,  }\item[{const wx\+String \&}]{OpcionC,  }\item[{const wx\+String \&}]{OpcionD,  }\item[{int}]{posX,  }\item[{int}]{posY }\end{DoxyParamCaption})}
+
+
+
+Metodo que se encarga de actualizar las preguntas y respuestas del quiz. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Question} & Recibe la pregunta a actualizar \\
+\hline
+{\em OpcionA} & Recibe la posible respuesta A \\
+\hline
+{\em OpcionB} & Recibe la posible respuesta B \\
+\hline
+{\em OpcionC} & Recibe la posible respuesta C \\
+\hline
+{\em OpcionD} & Recibe la posible respuesta D \\
+\hline
+{\em posX} & Recibe la posicion en el eje x de la pregunta \\
+\hline
+{\em posY} & Recibe la posicion en el eje Y de la pregunta \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{class_q_frame_a22f7f5f353b5031e67fd8436f83e2930}\label{class_q_frame_a22f7f5f353b5031e67fd8436f83e2930} 
+\index{QFrame@{QFrame}!button1@{button1}}
+\index{button1@{button1}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{button1}{button1}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} QFrame\+::button1}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em button1} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a9264a0cd7893aff006a9f92f63889a78}\label{class_q_frame_a9264a0cd7893aff006a9f92f63889a78} 
+\index{QFrame@{QFrame}!button2@{button2}}
+\index{button2@{button2}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{button2}{button2}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} QFrame\+::button2}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em button2} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_ac6ff820281c61a3faeeff26995a597e2}\label{class_q_frame_ac6ff820281c61a3faeeff26995a597e2} 
+\index{QFrame@{QFrame}!button3@{button3}}
+\index{button3@{button3}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{button3}{button3}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} QFrame\+::button3}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em button3} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_aa2bc9d3504af2620c12b3aa7160b88f7}\label{class_q_frame_aa2bc9d3504af2620c12b3aa7160b88f7} 
+\index{QFrame@{QFrame}!button5@{button5}}
+\index{button5@{button5}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{button5}{button5}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} QFrame\+::button5}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em button5} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a9cbb18879392690472d2359388386d86}\label{class_q_frame_a9cbb18879392690472d2359388386d86} 
+\index{QFrame@{QFrame}!button6@{button6}}
+\index{button6@{button6}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{button6}{button6}}
+{\footnotesize\ttfamily wx\+Button\texorpdfstring{$\ast$}{*} QFrame\+::button6}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em button6} & Objeto del tipo Boton \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_add56fb0a21c54837ba071ab40f9ea53a}\label{class_q_frame_add56fb0a21c54837ba071ab40f9ea53a} 
+\index{QFrame@{QFrame}!buttonA@{buttonA}}
+\index{buttonA@{buttonA}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{buttonA}{buttonA}}
+{\footnotesize\ttfamily wx\+Check\+Box\texorpdfstring{$\ast$}{*} QFrame\+::buttonA}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buttonA} & Objeto del tipo checkbox \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_aee692c74bf3c2b4d801d525fc7085be1}\label{class_q_frame_aee692c74bf3c2b4d801d525fc7085be1} 
+\index{QFrame@{QFrame}!buttonB@{buttonB}}
+\index{buttonB@{buttonB}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{buttonB}{buttonB}}
+{\footnotesize\ttfamily wx\+Check\+Box\texorpdfstring{$\ast$}{*} QFrame\+::buttonB}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buttonB} & Objeto del tipo checkbox \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_afec77b7bb308b98bd69e90f1ef3ef596}\label{class_q_frame_afec77b7bb308b98bd69e90f1ef3ef596} 
+\index{QFrame@{QFrame}!buttonC@{buttonC}}
+\index{buttonC@{buttonC}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{buttonC}{buttonC}}
+{\footnotesize\ttfamily wx\+Check\+Box\texorpdfstring{$\ast$}{*} QFrame\+::buttonC}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buttonC} & Objeto del tipo checkbox \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_af545deb38a63ebf79053a9f60d0601db}\label{class_q_frame_af545deb38a63ebf79053a9f60d0601db} 
+\index{QFrame@{QFrame}!buttonD@{buttonD}}
+\index{buttonD@{buttonD}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{buttonD}{buttonD}}
+{\footnotesize\ttfamily wx\+Check\+Box\texorpdfstring{$\ast$}{*} QFrame\+::buttonD}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buttonD} & Objeto del tipo checkbox \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_aa6986db260480ef220733ebd06b08949}\label{class_q_frame_aa6986db260480ef220733ebd06b08949} 
+\index{QFrame@{QFrame}!extra\_text@{extra\_text}}
+\index{extra\_text@{extra\_text}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{extra\_text}{extra\_text}}
+{\footnotesize\ttfamily wx\+Static\+Text\texorpdfstring{$\ast$}{*} QFrame\+::extra\+\_\+text}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em extra\+\_\+text} & Es un control de texto estatico no copiable por el usuario empleado en el metodo Update\+Extra\+Text \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a8958be9af5a32a80fd912c68772feab6}\label{class_q_frame_a8958be9af5a32a80fd912c68772feab6} 
+\index{QFrame@{QFrame}!image@{image}}
+\index{image@{image}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily wx\+Static\+Bitmap\texorpdfstring{$\ast$}{*} QFrame\+::image}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em image} & Objeto de la imagen que se muestra \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a481ad7ea490f793d37124462479256b5}\label{class_q_frame_a481ad7ea490f793d37124462479256b5} 
+\index{QFrame@{QFrame}!m\_textCtrl@{m\_textCtrl}}
+\index{m\_textCtrl@{m\_textCtrl}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{m\_textCtrl}{m\_textCtrl}}
+{\footnotesize\ttfamily wx\+Static\+Text\texorpdfstring{$\ast$}{*} QFrame\+::m\+\_\+text\+Ctrl}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em m\+\_\+text\+Ctrl} & Es un control de texto estatico no copiable por el usuario \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_a37a4c3503afec1a097fb5461f42c14d9}\label{class_q_frame_a37a4c3503afec1a097fb5461f42c14d9} 
+\index{QFrame@{QFrame}!pastButton@{pastButton}}
+\index{pastButton@{pastButton}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{pastButton}{pastButton}}
+{\footnotesize\ttfamily wx\+Check\+Box\texorpdfstring{$\ast$}{*} QFrame\+::past\+Button}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em past\+Button} & Objeto del tipo checkbox que almacena el boton presionado anteriormente \\
+\hline
+\end{DoxyParams}
+
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_q_frame_8h}{QFrame.\+h}}\item 
+\mbox{\hyperlink{_q_frame_8cpp}{QFrame.\+cpp}}\end{DoxyCompactItemize}

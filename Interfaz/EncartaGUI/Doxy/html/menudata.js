@@ -29,7 +29,22 @@ var menudata={children:[
 {text:"Índice de clases",url:"classes.html"},
 {text:"Jerarquía de clases",url:"hierarchy.html"},
 {text:"Miembros de clases",url:"functions.html",children:[
-{text:"Todos",url:"functions.html"},
-{text:"Funciones",url:"functions_func.html"}]}]},
+{text:"Todos",url:"functions.html",children:[
+{text:"a",url:"functions.html#index_a"},
+{text:"b",url:"functions.html#index_b"},
+{text:"c",url:"functions.html#index_c"},
+{text:"e",url:"functions.html#index_e"},
+{text:"i",url:"functions.html#index_i"},
+{text:"m",url:"functions.html#index_m"},
+{text:"o",url:"functions.html#index_o"},
+{text:"p",url:"functions.html#index_p"},
+{text:"q",url:"functions.html#index_q"},
+{text:"u",url:"functions.html#index_u"}]},
+{text:"Funciones",url:"functions_func.html"},
+{text:"Variables",url:"functions_vars.html"}]}]},
 {text:"Archivos",url:"files.html",children:[
-{text:"Lista de archivos",url:"files.html"}]}]}
+{text:"Lista de archivos",url:"files.html"},
+{text:"Miembros de los archivos",url:"globals.html",children:[
+{text:"Todos",url:"globals.html"},
+{text:"Funciones",url:"globals_func.html"},
+{text:"Variables",url:"globals_vars.html"}]}]}]}

@@ -1,22 +1,20 @@
 \doxysection{EFrame.\+h}
-\hypertarget{_e_frame_8h_source}{}\label{_e_frame_8h_source}
+\hypertarget{_e_frame_8h_source}{}\label{_e_frame_8h_source}\mbox{\hyperlink{_e_frame_8h}{Ir a la documentación de este archivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_e_frame}{EFrame}}\ :\ \textcolor{keyword}{public}\ wxFrame}
-\DoxyCodeLine{00007\ \{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_e_frame}{EFrame}}(wxFrame*\ parent,\ \textcolor{keyword}{const}\ wxString\&\ title,\ \textcolor{keyword}{const}\ wxPoint\&\ pos,\ \textcolor{keyword}{const}\ wxSize\&\ size);}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ CloseClicked(wxCommandEvent\&\ evt);}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateText(\textcolor{keyword}{const}\ wxString\&\ newText);}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ OnButtonClick(wxCommandEvent\&\ event);}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00015\ \ \ \ \ wxStaticText*\ m\_textCtrl;}
-\DoxyCodeLine{00016\ \};}
-\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_c_frame_8h}{CFrame.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <wx/mediactrl.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_e_frame}{EFrame}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_frame}{CFrame}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_e_frame}{EFrame}}(wxFrame*\ parent,\ \textcolor{keyword}{const}\ wxString\&\ title,\ \textcolor{keyword}{const}\ wxPoint\&\ pos,\ \textcolor{keyword}{const}\ wxSize\&\ size);}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_e_frame_a9992165af509ff5d5cbfb5a6b4329ee6}{OnButtonClick1}}(wxCommandEvent\&\ event);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \};}
 
 \end{DoxyCode}

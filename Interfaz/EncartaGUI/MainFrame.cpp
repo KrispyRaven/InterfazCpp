@@ -56,6 +56,7 @@ MainFrame::MainFrame(const wxString& tittle): wxFrame(nullptr, wxID_ANY, tittle)
 }
 
 // Implementamos los metodos: event handler
+
 void MainFrame::OnOpenNewFrame1(wxCommandEvent& event)
 {
 	CFrame* nCFrame = new CFrame(this, "C++", wxPoint(200, 200), wxSize(900, 680));
@@ -73,7 +74,7 @@ void MainFrame::OnOpenNewFrame2(wxCommandEvent& event)
 
 void MainFrame::OnOpenNewFrame3(wxCommandEvent& event)
 {
-	EFrame* nEFrame = new EFrame(this, "Estructuras dinámicas de datos y criterios de algoritmos", wxPoint(200, 200), wxSize(800, 600));
+	EFrame* nEFrame = new EFrame(this, "Estructuras dinámicas de datos y criterios de algoritmos", wxPoint(200, 200), wxSize(900, 680));
 	nEFrame->Show(true);
 
 	this->Show(false);

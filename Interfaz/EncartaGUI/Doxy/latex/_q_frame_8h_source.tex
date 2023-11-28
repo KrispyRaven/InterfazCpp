@@ -1,0 +1,67 @@
+\doxysection{QFrame.\+h}
+\hypertarget{_q_frame_8h_source}{}\label{_q_frame_8h_source}\mbox{\hyperlink{_q_frame_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_main_frame_8h}{MainFrame.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \mbox{\hyperlink{_q_frame_8h_aea49b72cf904db3cc5718dfec206aef5}{wxDECLARE\_EVENT}}(wxEVT\_QFRAME\_CLOSED,\ wxCommandEvent);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_q_frame}{QFrame}}\ :\ \textcolor{keyword}{public}\ wxFrame}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_q_frame}{QFrame}}(wxFrame*\ parent,\ \textcolor{keyword}{const}\ wxString\&\ title,\ \textcolor{keyword}{const}\ wxPoint\&\ pos,\ \textcolor{keyword}{const}\ wxSize\&\ size);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_frame_a40282458939f9c72fa9058e1494280f4}{CloseClicked}}(wxCommandEvent\&\ evt);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_frame_a94e783b9b7ad8df9cff0f0b8f1df08ea}{Updateimage}}(\textcolor{keyword}{const}\ wxString\&\ newimage,\ \textcolor{keywordtype}{int}\ pixX,\ \textcolor{keywordtype}{int}\ pixY,\ \textcolor{keywordtype}{int}\ posX,\ \textcolor{keywordtype}{int}\ posY);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_frame_a9feed1ede7c4543bdd286839e2d17a51}{UpdateQuestion}}(\textcolor{keyword}{const}\ wxString\&\ Question,\ \textcolor{keyword}{const}\ wxString\&\ OpcionA,\ \textcolor{keyword}{const}\ wxString\&\ OpcionB,\ \textcolor{keyword}{const}\ wxString\&\ OpcionC,\ \textcolor{keyword}{const}\ wxString\&\ OpcionD,\ \textcolor{keywordtype}{int}\ posX,\ \textcolor{keywordtype}{int}\ posY);}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_frame_abf3175703c7c3f746d37771f56023b27}{UpdateExtraText}}(\textcolor{keyword}{const}\ wxString\&\ text,\ \textcolor{keywordtype}{int}\ posX,\ \textcolor{keywordtype}{int}\ posY);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_frame_a518e4fe6979dc917cff5c0178cb730f6}{OnButtonClick}}(wxCommandEvent\&\ event);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_frame_afaee69b1681ffb8ae32f13f2ade6e3c5}{ABCDClick}}(wxCommandEvent\&\ event);}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090\ \ \ \ \ wxStaticText*\ \mbox{\hyperlink{class_q_frame_a481ad7ea490f793d37124462479256b5}{m\_textCtrl}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ wxStaticText*\ \mbox{\hyperlink{class_q_frame_aa6986db260480ef220733ebd06b08949}{extra\_text}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ wxStaticBitmap*\ \mbox{\hyperlink{class_q_frame_a8958be9af5a32a80fd912c68772feab6}{image}};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ wxButton*\ \mbox{\hyperlink{class_q_frame_a22f7f5f353b5031e67fd8436f83e2930}{button1}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ wxButton*\ \mbox{\hyperlink{class_q_frame_a9264a0cd7893aff006a9f92f63889a78}{button2}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \ \ wxButton*\ \mbox{\hyperlink{class_q_frame_ac6ff820281c61a3faeeff26995a597e2}{button3}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ wxButton*\ \mbox{\hyperlink{class_q_frame_aa2bc9d3504af2620c12b3aa7160b88f7}{button5}};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ wxButton*\ \mbox{\hyperlink{class_q_frame_a9cbb18879392690472d2359388386d86}{button6}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ wxCheckBox*\ \mbox{\hyperlink{class_q_frame_add56fb0a21c54837ba071ab40f9ea53a}{buttonA}};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ wxCheckBox*\ \mbox{\hyperlink{class_q_frame_aee692c74bf3c2b4d801d525fc7085be1}{buttonB}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \ \ \ \ wxCheckBox*\ \mbox{\hyperlink{class_q_frame_afec77b7bb308b98bd69e90f1ef3ef596}{buttonC}};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00145\ \ \ \ \ wxCheckBox*\ \mbox{\hyperlink{class_q_frame_af545deb38a63ebf79053a9f60d0601db}{buttonD}};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00150\ \ \ \ \ wxCheckBox*\ \mbox{\hyperlink{class_q_frame_a37a4c3503afec1a097fb5461f42c14d9}{pastButton}};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_q_frame_8h_a88859ce72faebb79ea0a2bca00a0f46b}{e}};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{_q_frame_8h_a2b62b9d9ee4bba482f36fb73b6c18325}{temita}};}
+\DoxyCodeLine{00163\ }
+
+\end{DoxyCode}
