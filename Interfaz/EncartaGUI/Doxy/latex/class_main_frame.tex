@@ -29,11 +29,11 @@ void \mbox{\hyperlink{class_main_frame_a570b79051c2bafeaf3ef705dbc443637}{On\+Op
 void \mbox{\hyperlink{class_main_frame_ad417402e35b4f98a23214ee5f538219f}{On\+Exit\+Button\+Click}} (wx\+Command\+Event \&event)
 \begin{DoxyCompactList}\small\item\em Metodo encargado de cerrar la ventana principal y todas sus dependencias. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_frame_a15f388a2d2e5128082df78beae45222f}{On\+Open\+New\+Frame4}} (wx\+Command\+Event \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_q_frame}{QFrame}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_frame_af4f91965039450fcf03519d4059ed742}{On\+QFrame\+Closed}} (wx\+Command\+Event \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em Metodo encargado de llamar al manejador de eventos y que este llame a la ventan. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_frame_a98656d6637697977124c7c94ca76412f}{On\+CFrame\+Closed}} (wx\+Command\+Event \&event)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metodo encargado de llamar al manejador de eventos y que este llame a la ventan. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,6 +70,10 @@ Llamada del metodo constructor de la ventana.
 \index{OnCFrameClosed@{OnCFrameClosed}!MainFrame@{MainFrame}}
 \doxysubsubsection{\texorpdfstring{OnCFrameClosed()}{OnCFrameClosed()}}
 {\footnotesize\ttfamily void Main\+Frame\+::\+On\+CFrame\+Closed (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo encargado de llamar al manejador de eventos y que este llame a la ventan. 
 
 \Hypertarget{class_main_frame_ad417402e35b4f98a23214ee5f538219f}\label{class_main_frame_ad417402e35b4f98a23214ee5f538219f} 
 \index{MainFrame@{MainFrame}!OnExitButtonClick@{OnExitButtonClick}}
@@ -137,11 +141,24 @@ Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_
 \doxysubsubsection{\texorpdfstring{OnOpenNewFrame4()}{OnOpenNewFrame4()}}
 {\footnotesize\ttfamily void Main\+Frame\+::\+On\+Open\+New\+Frame4 (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
 
+
+
+Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_q_frame}{QFrame}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci�n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_main_frame_af4f91965039450fcf03519d4059ed742}\label{class_main_frame_af4f91965039450fcf03519d4059ed742} 
 \index{MainFrame@{MainFrame}!OnQFrameClosed@{OnQFrameClosed}}
 \index{OnQFrameClosed@{OnQFrameClosed}!MainFrame@{MainFrame}}
 \doxysubsubsection{\texorpdfstring{OnQFrameClosed()}{OnQFrameClosed()}}
 {\footnotesize\ttfamily void Main\+Frame\+::\+On\+QFrame\+Closed (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metodo encargado de llamar al manejador de eventos y que este llame a la ventan. 
 
 
 
@@ -163,6 +180,11 @@ Metodo encargado de crear una nueva ventana llamando al archivo \doxylink{class_
 \doxysubsubsection{\texorpdfstring{main\_text}{main\_text}}
 {\footnotesize\ttfamily wx\+Static\+Text\texorpdfstring{$\ast$}{*} Main\+Frame\+::main\+\_\+text}
 
+
+\begin{DoxyParams}{Parámetros}
+{\em main\+\_\+text} & Parametro que inicia el texto de pantalla \\
+\hline
+\end{DoxyParams}
 
 
 La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}

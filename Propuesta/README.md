@@ -178,6 +178,55 @@ Al estripar el botón Estructuras , se abre la ventana que se muestra a continua
 * Manejo de memoria dinámica: Al inicio se tenían dudas sobre cómo administrar la memoria dinámica, ya que, como se pudo observar en el código proporcionado, cada objeto creado, practicamente se almacenaba en la memoria dinámica. Como solución, se pudo investigar que wxWidgets se encarga de devolver el espacio de memoria ocupado, una vez que se cierran todas las ventanas. 
 
 
+# Reporte Final
+## Ventanas de GUI
+
+Los cambios que se implementaron para lograr alcanzar el diseño final fueron meramento esteticos exceptuando por un par de implementaciones puntuales. El diagrama esquematico de la estructura de nuestra aplicacion se puede ver de la siguiente manera
+
+![Menu Principal](Imagenes/diag.png)
+### 1- Menú principal
+Se logra diseñar una interfaz gráfica, tal y como se muestra en la siguiente figura. Esta ventana contiene 5 botones: C/C++, OPP,
+Estructuras, Quiz y Salir. Los primeros tres botones constituyen los 3 temas principales que se ingresan al hacer click en cada uno de ellos. 
+
+![Menu Principal](Imagenes/Menu_principal1.png)
+
+### 2- Segunda Ventana ( Temas de C/C++ )
+
+Al estripar el botón C/C++, se abre la ventana que se muestra a continuación. 
+
+![Menu Principal](Imagenes/Menu_CC1.png)
+
+### 3- Tercera Ventana ( Temas de programación orientada a objetos (OOP) )
+
+Al estripar el botón OOP, se abre la ventana que se muestra a continuación. Al estripar cualquier botón, se despliega un texto asociado al tema. De momento, no se ha incorporado la información respectiva, pero se planea incluir una explicación sencilla que incluya al menos una imagen que permita ilustrar el tema correspondiente. Esto se puede observar a continuación. Asimismo, al estripar el bóton "Regresar al menú principal", el programa logra cerrar la ventana. Cabe destacar que, a nivel de código, la implementación es la misma con respecto a la ventana de C/C++ explicada anteriormente, razón por la cual, no se incluye el código correspondiente.
+
+![Menu Principal](Imagenes/Menu_OPP1.png)
+
+### 4- Cuarta Ventana ( Temas de estructuras dinámicas de datos y criterios de algoritmos )
+
+Al estripar el botón Estructuras , se abre la ventana que se muestra a continuación. Al estripar cualquier botón, se despliega un texto asociado al tema. De momento, no se ha incorporado la información respectiva, pero se planea incluir una explicación sencilla que incluya al menos una imagen que permita ilustrar el tema correspondiente. Esto se puede observar a continuación. Asimismo, al estripar el bóton "Regresar al menú principal", el programa logra cerrar la ventana. Cabe destacar que, a nivel de código, la implementación es la misma con respecto a la ventana de C/C++ explicada anteriormente, razón por la cual, no se incluye el código correspondiente.
+
+![Menu Principal](Imagenes/Menu_Estructuras1.png)
+
+### 5- Quinta Ventana ( Quiz )
+
+Al estripar el botón Quiz , se abre la ventana que se muestra a continuación. Al estripar cualquier botón, se despliega un texto asociado al tema. De momento, no se ha incorporado la información respectiva, pero se planea incluir una explicación sencilla que incluya al menos una imagen que permita ilustrar el tema correspondiente. Esto se puede observar a continuación. Asimismo, al estripar el bóton "Regresar al menú principal", el programa logra cerrar la ventana. Cabe destacar que, a nivel de código, la implementación es la misma con respecto a la ventana de C/C++ explicada anteriormente, razón por la cual, no se incluye el código correspondiente.
+
+![Menu Principal](Imagenes/Menu_Q.png)
+
+## Aspectos destacados
+
+### Manejador de eventos
+Clases de Eventos: wxWidgets proporciona una variedad de clases de eventos para diferentes tipos de interacciones, como wxCommandEvent para eventos generados por controles (botones, menús), wxMouseEvent para eventos del mouse, wxKeyEvent para eventos del teclado, entre otros.
+
+Preprocesamiento y Posprocesamiento de Eventos: wxWidgets permite interceptar eventos antes de que sean procesados por el widget y después de que hayan sido procesados para realizar tareas adicionales.
+
+Definición de Eventos Personalizados: Puedes crear tus propios eventos personalizados para manejar situaciones específicas que no están cubiertas por los eventos predefinidos de wxWidgets.
+
+### Diseño
+Distribución y organización de los elementos: Diseño de la disposición lógica de los controles y elementos de la interfaz para una navegación fácil y comprensión clara.
+
+Imagenes y texto: Sew debe conocer las caracteristicas de cada objeto para que al momento de ser empleado su colocacion y visualizacion sea idonea.
 
 ## Bibliografía
 

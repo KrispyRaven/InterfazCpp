@@ -18,7 +18,7 @@ Diagrama de herencia de QFrame\begin{figure}[H]
 \doxysubsubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_q_frame_a5fdda37711d474c78423e31c6e81fde0}{QFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\mbox{\hyperlink{class_q_frame_a5fdda37711d474c78423e31c6e81fde0}{QFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_q_frame_ab87033effd282b67f9981da3225d2fa8}{parent}}, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
 \begin{DoxyCompactList}\small\item\em Metodo constructor de la clase \doxylink{class_q_frame}{QFrame}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_q_frame_a40282458939f9c72fa9058e1494280f4}{Close\+Clicked}} (wx\+Command\+Event \&evt)
 \begin{DoxyCompactList}\small\item\em Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra. \end{DoxyCompactList}\item 
@@ -31,7 +31,9 @@ void \mbox{\hyperlink{class_q_frame_abf3175703c7c3f746d37771f56023b27}{Update\+E
 void \mbox{\hyperlink{class_q_frame_a518e4fe6979dc917cff5c0178cb730f6}{On\+Button\+Click}} (wx\+Command\+Event \&event)
 \begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_q_frame_afaee69b1681ffb8ae32f13f2ade6e3c5}{ABCDClick}} (wx\+Command\+Event \&event)
-\begin{DoxyCompactList}\small\item\em Metodo que responde cuando el usuario selecciona alguna opcion\+: A, B, C o D e indica si la respuesta es correcta o incorrecta. Esto empleando el metodo "{}update\+Extra\+Text"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metodo que responde cuando el usuario selecciona alguna opcion\+: A, B, C o D e indica si la respuesta es correcta o incorrecta. Esto empleando el metodo "{}update\+Extra\+Text"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_q_frame_abd7a65358f687c59514328ae2700a0c1}{On\+Cerrar\+Ventana}} (wx\+Close\+Event \&event)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,6 +62,8 @@ wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_afec77b
 wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_af545deb38a63ebf79053a9f60d0601db}{buttonD}}
 \item 
 wx\+Check\+Box \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_a37a4c3503afec1a097fb5461f42c14d9}{past\+Button}}
+\item 
+wx\+Frame \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_q_frame_ab87033effd282b67f9981da3225d2fa8}{parent}}
 \end{DoxyCompactItemize}
 
 
@@ -136,7 +140,13 @@ Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociad
 {\em event} & recibe un objeto wx\+Command\+Event\& como argumento. Este objeto wx\+Command\+Event contiene informaci{\ucr}n sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_q_frame_abf3175703c7c3f746d37771f56023b27}\label{class_q_frame_abf3175703c7c3f746d37771f56023b27} 
+\Hypertarget{class_q_frame_abd7a65358f687c59514328ae2700a0c1}\label{class_q_frame_abd7a65358f687c59514328ae2700a0c1} 
+\index{QFrame@{QFrame}!OnCerrarVentana@{OnCerrarVentana}}
+\index{OnCerrarVentana@{OnCerrarVentana}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{OnCerrarVentana()}{OnCerrarVentana()}}
+{\footnotesize\ttfamily void QFrame\+::\+On\+Cerrar\+Ventana (\begin{DoxyParamCaption}\item[{wx\+Close\+Event \&}]{event }\end{DoxyParamCaption})}
+
+@biref Metodo para cerrar el programa desde la clase hija \Hypertarget{class_q_frame_abf3175703c7c3f746d37771f56023b27}\label{class_q_frame_abf3175703c7c3f746d37771f56023b27} 
 \index{QFrame@{QFrame}!UpdateExtraText@{UpdateExtraText}}
 \index{UpdateExtraText@{UpdateExtraText}!QFrame@{QFrame}}
 \doxysubsubsection{\texorpdfstring{UpdateExtraText()}{UpdateExtraText()}}
@@ -340,6 +350,17 @@ Metodo que se encarga de actualizar las preguntas y respuestas del quiz.
 
 \begin{DoxyParams}{Parámetros}
 {\em m\+\_\+text\+Ctrl} & Es un control de texto estatico no copiable por el usuario \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_q_frame_ab87033effd282b67f9981da3225d2fa8}\label{class_q_frame_ab87033effd282b67f9981da3225d2fa8} 
+\index{QFrame@{QFrame}!parent@{parent}}
+\index{parent@{parent}!QFrame@{QFrame}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily wx\+Frame\texorpdfstring{$\ast$}{*} QFrame\+::parent}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em parent} & Variable que apunta a la ventana padre \\
 \hline
 \end{DoxyParams}
 \Hypertarget{class_q_frame_a37a4c3503afec1a097fb5461f42c14d9}\label{class_q_frame_a37a4c3503afec1a097fb5461f42c14d9} 

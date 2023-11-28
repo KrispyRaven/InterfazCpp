@@ -18,14 +18,14 @@ Diagrama de herencia de EFrame\begin{figure}[H]
 \doxysubsubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_e_frame_a4a2931136806e61c7257e3288def3023}{EFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\mbox{\hyperlink{class_e_frame_a4a2931136806e61c7257e3288def3023}{EFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_c_frame_a5d0988a688ca4d8e9b16191929149511}{parent}}, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
 \begin{DoxyCompactList}\small\item\em Metodo Constructor de la clase \doxylink{class_e_frame}{EFrame}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_e_frame_a9992165af509ff5d5cbfb5a6b4329ee6}{On\+Button\+Click1}} (wx\+Command\+Event \&event)
 \begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Métodos públicos heredados de \mbox{\hyperlink{class_c_frame}{CFrame}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_c_frame_a2b9e283688643385de39e817d54ad435}{CFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}parent, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\mbox{\hyperlink{class_c_frame_a2b9e283688643385de39e817d54ad435}{CFrame}} (wx\+Frame \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_c_frame_a5d0988a688ca4d8e9b16191929149511}{parent}}, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
 \begin{DoxyCompactList}\small\item\em Metodo Constructor de la clase \doxylink{class_c_frame}{CFrame}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_c_frame_ad62ae8c5d5f95a344bb220400fc4d22c}{Close\+Clicked}} (wx\+Command\+Event \&evt)
 \begin{DoxyCompactList}\small\item\em Metodo que se encarga de cerrar solo la ventan hija en la cual el se encuentra. \end{DoxyCompactList}\item 
@@ -34,7 +34,9 @@ void \mbox{\hyperlink{class_c_frame_ae6eef94832463134a459608e66cc4d99}{Update\+T
 void \mbox{\hyperlink{class_c_frame_aa3743c577c836daeee539be70c876963}{Updateimage}} (const wx\+String \&newimage, int pixX, int pixY, int posX, int posY)
 \begin{DoxyCompactList}\small\item\em Metodo que actualiza la imagen que se muestra. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_c_frame_af156b7eb70ee37f491f0d0361d813603}{On\+Button\+Click}} (wx\+Command\+Event \&event)
-\begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metodo que nos reconoce el boton que se ha clickeado y ejecuta un metodo asociado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_frame_aafcb126e0299ee0fcb41219b1dfff35d}{On\+Cerrar\+Ventana}} (wx\+Close\+Event \&event)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Otros miembros heredados}
 \doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{class_c_frame}{CFrame}}}
 \begin{DoxyCompactItemize}
@@ -56,6 +58,8 @@ wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a7b8e60c6e1
 wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a987844248aa0d7d5b52c3e50f2ad0547}{button6}}
 \item 
 wx\+Panel \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a7287531130b6455ce0572c407761a0bd}{panel}}
+\item 
+wx\+Frame \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_a5d0988a688ca4d8e9b16191929149511}{parent}}
 \end{DoxyCompactItemize}
 
 
