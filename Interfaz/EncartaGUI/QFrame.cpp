@@ -10,14 +10,14 @@ string temita = "";
 QFrame::QFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const wxSize& size)
     : wxFrame(parent, wxID_ANY, title, pos, size)
 {
-
+    this->parent = parent;
     wxPanel* panel = new wxPanel(this);
     this->button1 = new wxButton(panel, wxID_ANY, "Tema 1: C/C++", wxPoint(20, 50), wxSize(120, 50));
     this->button2 = new wxButton(panel, wxID_ANY, "Tema 2: OPP", wxPoint(20, 55 + 50), wxSize(120, 50));
     this->button3 = new wxButton(panel, wxID_ANY, "Tema 3: Estructuras", wxPoint(20, 55 + 50 + 55), wxSize(120, 50));
     this->button5 = new wxButton(panel, wxID_ANY, "Regresar al menu principal", wxPoint(560, 400), wxSize(230, 50));
     this->button6 = new wxButton(panel, wxID_ANY, "Siguiente", wxPoint(200, 400), wxSize(200, 50));
-
+    this->Bind(wxEVT_CLOSE_WINDOW, &QFrame::OnCerrarVentana, this);
     this->button6->Show(false);
 
     this->buttonA = new wxCheckBox(panel, wxID_ANY, "A)", wxPoint(180, 105));
@@ -80,10 +80,15 @@ QFrame::QFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
 
 
 
+// Se define el metodo para cerrar la ventana hija
 void QFrame::CloseClicked(wxCommandEvent& evt) {
-    wxCommandEvent closeEvent(wxEVT_QFRAME_CLOSED);
-    wxPostEvent(this, closeEvent);
-    Close();
+    // Ocultar la ventana secundaria
+    this->Hide();
+
+    // Mostrar la ventana principal nuevamente
+    if (parent && !parent->IsBeingDeleted()) {
+        parent->Show();
+    };
 }
 
 
@@ -377,7 +382,13 @@ void QFrame::ABCDClick(wxCommandEvent& event)
 }
 
 
-
+void QFrame::OnCerrarVentana(wxCloseEvent& event) {
+    // Si la ventana principal aún existe, cerrarla y terminar la aplicación
+    if (parent && !parent->IsBeingDeleted()) {
+        parent->Close();
+        this->Destroy();
+    }
+}
 
 
 

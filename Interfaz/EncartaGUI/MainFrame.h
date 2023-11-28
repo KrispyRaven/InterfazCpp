@@ -51,13 +51,29 @@ public:
 	*/
 	void OnExitButtonClick(wxCommandEvent& event);
 	
-	// Estas fueron los tres metodos que agregue
+	/**
+	* @brief Metodo encargado de crear una nueva ventana llamando al archivo QFrame
+	* @param event recibe un objeto wxCommandEvent& como argumento.
+	* Este objeto wxCommandEvent contiene información sobre el evento que se ha producido, como su tipo, el ID del evento y cualquier dato adicional asociado.
+	*/
 	void OnOpenNewFrame4(wxCommandEvent& event);
 	
+	/**
+	* @brief Metodo encargado de llamar al manejador de eventos y que este llame a la ventan
+	*/ 
 	void OnQFrameClosed(wxCommandEvent& event);
+
+	/**
+	* @brief Metodo encargado de llamar al manejador de eventos y que este llame a la ventan
+	*/
 	void OnCFrameClosed(wxCommandEvent& event);
+
+
 	
 public:
+	/**
+	* @param main_text Parametro que inicia el texto de pantalla
+	*/
 	wxStaticText* main_text;
 	/**
 	* @param image Objeto de la imagen que se muestra

@@ -32,5 +32,4 @@ public:
 	void OnButtonClick1(wxCommandEvent& event);
 
 
-
 };

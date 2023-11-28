@@ -55,14 +55,14 @@ MainFrame::MainFrame(const wxString& tittle): wxFrame(nullptr, wxID_ANY, tittle)
 
 }
 
-// Implementamos los metodos: event handler
+
 
 void MainFrame::OnOpenNewFrame1(wxCommandEvent& event)
 {
+	this->Hide();
 	CFrame* nCFrame = new CFrame(this, "C++", wxPoint(200, 200), wxSize(900, 680));
 	nCFrame->Show(true);
 
-	this->Show(false);
 }
 
 void MainFrame::OnOpenNewFrame2(wxCommandEvent& event)

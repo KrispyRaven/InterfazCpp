@@ -12,7 +12,7 @@ CFrame::CFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
     : wxFrame(parent, wxID_ANY, title, pos, size)
 {
 
-    
+    this->parent = parent;
     panel = new wxPanel(this);
     this-> button1 = new wxButton(panel, wxID_ANY, "DataType", wxPoint(20, 50), wxSize(100, 50));
     this-> button2 = new wxButton(panel, wxID_ANY, "Operadores", wxPoint(20, 55 + 50), wxSize(100, 50));
@@ -30,6 +30,7 @@ CFrame::CFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
     button4->Bind(wxEVT_BUTTON, &CFrame::OnButtonClick, this);
     button5->Bind(wxEVT_BUTTON, &CFrame::CloseClicked, this);
     button6->Bind(wxEVT_BUTTON, &CFrame::OnButtonClick, this);
+    this->Bind(wxEVT_CLOSE_WINDOW, &CFrame::OnCerrarVentana, this);
 
 
     // Establecer color gris RGB: (128, 128, 128) en el objeto panel
@@ -57,9 +58,13 @@ hardware.)", wxPoint(140, 30), wxSize(400, 300), wxALIGN_LEFT);
 
 // Se define el metodo para cerrar la ventana hija
 void CFrame::CloseClicked(wxCommandEvent& evt) {
-    wxCommandEvent closeEvent(wxEVT_CFRAME_CLOSED);
-    wxPostEvent(this, closeEvent);
-    Close();
+    // Ocultar la ventana secundaria
+    this->Hide();
+
+    // Mostrar la ventana principal nuevamente
+    if (parent && !parent->IsBeingDeleted()) {
+        parent->Show();
+    };
 }
 
 // Metodo que se encarga de actualizar la imagen del objeto image creado en el constructor
@@ -266,5 +271,13 @@ car la condición.)";
             i += 1;
 
         }
+    }
+}
+
+void CFrame::OnCerrarVentana(wxCloseEvent& event) {
+    // Si la ventana principal aún existe, cerrarla y terminar la aplicación
+    if (parent && !parent->IsBeingDeleted()) {
+        parent->Close();
+        this->Destroy();
     }
 }

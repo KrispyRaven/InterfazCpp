@@ -99,6 +99,16 @@ public:
 	* @param panel Objeto del tipo wxPanel que referencia nuestro panel
 	*/
 	wxPanel* panel;
+
+	/**
+	* @param parent Variable que apunta a la ventana padre
+	*/
+	wxFrame* parent;
+
+	/**
+	* @biref Metodo para cerrar el programa desde la clase hija
+	*/
+	void OnCerrarVentana(wxCloseEvent& event);
 };
 
 // Declaraci�n de la variable global 
