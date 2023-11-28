@@ -1,60 +1,149 @@
 #include "OOP.h"
 #include <wx/wx.h>
 
+
+
+
+
+
 OOP::OOP(wxFrame* parent, const wxString& title, const wxPoint& pos, const wxSize& size)
-	: wxFrame(parent, wxID_ANY, title, pos, size)
+    : CFrame(parent, title, pos, size)
 {
 
-	wxPanel* panel = new wxPanel(this);
-	wxButton* button1 = new wxButton(panel, wxID_ANY, "Clases", wxPoint(20, 50), wxSize(100, 50));
-	wxButton* button2 = new wxButton(panel, wxID_ANY, "Abstraccion", wxPoint(20, 55 + 50), wxSize(100, 50));
-	wxButton* button3 = new wxButton(panel, wxID_ANY, "Herencia", wxPoint(20, 55 + 50 + 55), wxSize(100, 50));
-	wxButton* button4 = new wxButton(panel, wxID_ANY, "Polimorfismo", wxPoint(20, 55 + 50 + 55 + 55), wxSize(100, 50));
-	wxButton* button5 = new wxButton(panel, wxID_ANY, "Regresar al menu principal", wxPoint(550, 400), wxSize(200, 50));
+    //wxPanel* panel = new wxPanel(this);
+    button2->Show(false);
+    button1->SetLabel("Clases");
+    button3->SetLabel("Herencia");
+    button4->SetLabel("Polimorfismo");
+    
+    button1->SetPosition(wxPoint(20, 50 + 130));
+    button3->SetPosition(wxPoint(20, 55 + 50 + 130));
+    button4->SetPosition(wxPoint(20, 55 + 50 + 55 + 130));
 
-    m_textCtrl = new wxStaticText(panel, wxID_ANY, R"(La ProgramaciÛn Orientada a Objetos (POO) es un paradigma de programaciÛn que se basa en el concepto de "objetos" para organizar y estructurar el cÛdigo. Se centra en modelar entidades del mundo real como objetos con atributos (datos) y comportamientos (mÈtodos o funciones).)", wxPoint(140, 50), wxSize(400, 300), wxALIGN_LEFT);
+   
 
-	button5->Bind(wxEVT_BUTTON, &OOP::CloseClicked, this);
-    button1->Bind(wxEVT_BUTTON, &OOP::OnButtonClick, this);
-    button2->Bind(wxEVT_BUTTON, &OOP::OnButtonClick, this);
-    button3->Bind(wxEVT_BUTTON, &OOP::OnButtonClick, this);
-    button4->Bind(wxEVT_BUTTON, &OOP::OnButtonClick, this);
+    button6->Show(false);
+
+    
+    button1->Bind(wxEVT_BUTTON, &OOP::OnButtonClick1, this);
+    button3->Bind(wxEVT_BUTTON, &OOP::OnButtonClick1, this);
+    button4->Bind(wxEVT_BUTTON, &OOP::OnButtonClick1, this);
+    button6->Bind(wxEVT_BUTTON, &OOP::OnButtonClick1, this);
+
+    m_textCtrl->SetLabel(R"( La Programaci√≥n Orientada a Objetos (POO) es un paradigma de programaci√≥n 
+que se basa en el concepto de "objetos" para organizar y estructurar el c√≥digo. 
+Se centra en modelar entidades del mundo real como objetos con atributos (datos) 
+y comportamientos (m√©todos o funciones).)");
+
+    m_textCtrl->SetPosition(wxPoint(170, 50));
+
+    Updateimage("Images/OOP.png", 439, 330, 250, 150);
+
 }
 
-void OOP::CloseClicked(wxCommandEvent& evt) {
-	Close();
-}
 
-void OOP::UpdateText(const wxString& newText)
+
+void OOP::OnButtonClick1(wxCommandEvent& event)
 {
-    m_textCtrl->SetLabel(newText);
-}
+    wxString clases_text = R"(Las clases son como plantillas o moldes que definen las caracter√≠sticas y comportamientos
+de un objeto. Los objetos son instancias individuales de estas clases. A continuaci√≥n 
+se muestra un ejemplo de c√≥mo se implementa. En el archivo .hpp declaramos 4 atributos 
+de la clase NotaStd y colocamos los prototipos de dos m√©todos que esta clase posee. Uno
+de ellos es el constructor, el cual debe llevar el mismo nombre de la clase. En el archivo
+.cpp debemos implementar los m√©todos y atributos definidos anteriormente en el .hpp.
+)";
 
-void OOP::OnButtonClick(wxCommandEvent& event)
-{
+    wxString abstraccion_text = R"(Permite representar caracter√≠sticas esenciales de un objeto sin mostrar todos los
+detalles complejos de su implementaci√≥n.)";
+
+    wxString herencia_text = R"(Permite que una clase (llamada subclase o clase derivada) herede atributos y m√©todos
+de otra clase (llamada superclase o clase base), facilitando la reutilizaci√≥n de c√≥digo
+y la creaci√≥n de jerarqu√≠as. En el ejemplo mostrado, se tienen lo siguientes archivos :
+Shape.h, Rectangle.hpp, Shape.cpp y Shape.cpp. En este caso, la clase madre ser√≠a 
+Shape y la clase hija ser√≠a Rectangle. Dado que la clase hija hereda los m√©todos 
+de la clase madre, se podr√≠an utilizar los m√©todos setWidth y setHeight para defi-
+nir los atributos de la clase Shape, los cuales tambi√©n son hereados por la clase 
+hija. Finalmente, se podr√≠a utilizar el m√©todo getArea de la clase Rectangle para
+obtener el area del objeto creado.)";
+
+    wxString poli_text = R"(Permite que los objetos de diferentes clases sean tratados de manera uniforme a trav√©s de
+interfaces comunes, lo que permite que un objeto sea usado como si fuera de otro tipo.
+Por ejemplo, note que se crea un puntero objeto tipo Base, el cual apunta a un objeto 
+tipo Derivada en memoria din√°mica. El m√©todoOne existe en ambas clases, no obstante, 
+se decide darle prioridad al MetodoOne() de la clase derivada, debido a que esta no es
+virtual. Por el contrario, el m√©todoTwo( ) se elige de la clase base, ya que originalmente
+el objeto es de tipo Base. )";
+    
+    
+    
+    
     wxButton* button = dynamic_cast<wxButton*>(event.GetEventObject());
-
     if (button)
     {
         wxString buttonText = button->GetLabel();
-        // AquÌ puedes personalizar el texto seg˙n el botÛn presionado
+        
+        
+        // Segun el boton presionado, ejecute una funcionalidad particular
+        
+        
         if (buttonText == "Clases") {
-            UpdateText(R"(Las clases son como plantillas o moldes que definen las caracterÌsticas y comportamientos
-de un objeto. Los objetos son instancias individuales de estas clases)");
-        }
-        else if (buttonText == "Abstraccion") {
-            UpdateText( R"(Permite representar caracterÌsticas esenciales de un objeto sin mostrar todos los
-detalles complejos de su implementaciÛn.)");
+            i = 1;
+            // Actualizamos el label y mostramos el objeto en pantalla
+            button6->SetLabel("Ver .cpp");
+            button6->Show(true);
+
+            // Actualizamos el valor del objeto imagen
+            Updateimage("Images/hppclases.png", 600, 327, 180, 180);
+
+            UpdateText(clases_text);
         }
         else if (buttonText == "Herencia") {
-            UpdateText(R"(Permite que una clase (llamada subclase o clase derivada) herede atributos y mÈtodos
-de otra clase (llamada superclase o clase base), facilitando la reutilizaciÛn de cÛdigo
-y la creaciÛn de jerarquÌas.)");
+            i = 4;
+            UpdateText(herencia_text);
+            button6->SetLabel("Ver .cpp");
+            button6->Show(true);
+
+            Updateimage("Images/herenciahpp.png", 650, 187, 180, 300);
         }
         else if (buttonText == "Polimorfismo") {
-            UpdateText(R"(Permite que los objetos de diferentes clases sean tratados de manera uniforme a travÈs
- de interfaces comunes, lo que permite que un objeto sea usado como si fuera de otro tipo.)");
+            button6->Show(false);
+            UpdateText(poli_text);
+            Updateimage("Images/poli.png", 700, 162, 140, 200);
+
         }
-        // Puedes agregar m·s condiciones seg˙n la lÛgica que desees
+        else if (buttonText == "Ver .cpp" || buttonText == "Ver .hpp") {
+
+            button6->SetLabel("Ver .hpp");
+            button6->Show(true);
+
+            if (i == 2) {
+                button6->SetLabel("Ver .cpp");
+                button6->Show(true);
+                i = 0;
+            }
+
+            if (i == 5) {
+                button6->SetLabel("Ver .cpp");
+                button6->Show(true);
+                i = 3;
+
+            }
+
+
+            // Posibles imagenes a desplegar en las pesta√±as Toma de decisiones (index 0 y 1) y Loops (index 2 y 3)
+
+            int pixY[] = { 327, 280,1, 187, 161 };
+            int pixX[] = { 600, 600 ,1, 650, 650 };
+            int possY[] = { 180, 180,1, 300, 300 };
+            int possX[] = { 180, 180,1, 180, 180 };
+
+            wxString imagenes[] = { "Images/hppclases.png", "Images/cppclases.png"," ", "Images/herenciahpp.png", "Images/herenciacpp.png"};
+            Updateimage(imagenes[i], pixX[i], pixY[i], possX[i], possY[i]);
+
+            i += 1;
+
+
+        }
+       
     }
 }

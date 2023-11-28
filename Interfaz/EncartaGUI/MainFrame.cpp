@@ -6,7 +6,7 @@
 #include "QFrame.h"
 
 
-/* Se define el conmstructor de la ventana */
+/* Se define el constructor de la ventana */
 MainFrame::MainFrame(const wxString& tittle): wxFrame(nullptr, wxID_ANY, tittle) {
 
 	
@@ -20,7 +20,6 @@ MainFrame::MainFrame(const wxString& tittle): wxFrame(nullptr, wxID_ANY, tittle)
 	wxButton* button4 = new wxButton(panel, wxID_ANY, "Salir", wxPoint(670, 530), wxSize(100, 50));
 
 
-	// Bind es un metodo que proviene de la clase: evt handler. Cualquier clase boton hereda de esta clase dicho metodo.
 	// Este es el link entre el evento y el metodo a ser llamado
 	button1->Bind(wxEVT_BUTTON, &MainFrame::OnOpenNewFrame1, this);
 	button2->Bind(wxEVT_BUTTON, &MainFrame::OnOpenNewFrame2, this);
@@ -33,11 +32,9 @@ MainFrame::MainFrame(const wxString& tittle): wxFrame(nullptr, wxID_ANY, tittle)
 	Bind(wxEVT_CFRAME_CLOSED, &MainFrame::OnCFrameClosed, this);
 
 
-
 	// Inicializamos atributos
 	// Este objeto representa el texto principal mostrado en la ventana actual (objeto)
-	this->main_text = new wxStaticText(panel, wxID_ANY, R"(¿Qué desea aprender o recordar?)", wxPoint(300, 280), wxSize(250, 100), wxALIGN_LEFT);
-
+	this->main_text = new wxStaticText(panel, wxID_ANY, R"(¿Qué desea aprender o recordar?)", wxPoint(200, 100), wxSize(250, 100), wxALIGN_LEFT);
 
 
 	// Creamos un objeto para definir el tamaño de letra, la familia de estilos, tipo de letra, grosor de la letra
@@ -49,6 +46,13 @@ MainFrame::MainFrame(const wxString& tittle): wxFrame(nullptr, wxID_ANY, tittle)
 	
 	// Establecer color gris RGB: (128, 128, 128) en el objeto panel
 	panel->SetBackgroundColour(wxColour(128, 128, 128)); 
+
+
+	// Creamos un nuevo objeto (image)
+	wxPNGHandler* handler = new wxPNGHandler;
+	wxImage::AddHandler(handler);
+	this->image = new wxStaticBitmap(panel, wxID_ANY, wxBitmap("Images/mainframe.png", wxBITMAP_TYPE_PNG), wxPoint(250, 200), wxSize(333, 300));
+
 }
 
 // Implementamos los metodos: event handler
@@ -62,15 +66,14 @@ void MainFrame::OnOpenNewFrame1(wxCommandEvent& event)
 
 void MainFrame::OnOpenNewFrame2(wxCommandEvent& event)
 {
-	OOP* nOOP = new OOP(this, "OOP", wxPoint(200, 200), wxSize(800, 600));
+	OOP* nOOP = new OOP(this, "OOP", wxPoint(200, 200), wxSize(900, 680));
 	nOOP->Show(true);
-
-	//this->Show(false);
+	this->Show(false); 
 }
 
 void MainFrame::OnOpenNewFrame3(wxCommandEvent& event)
 {
-	EFrame* nEFrame = new EFrame(this, "Estructuras dinámicas de datos y criterios de algoritmos", wxPoint(200, 200), wxSize(900, 680));
+	EFrame* nEFrame = new EFrame(this, "Estructuras dinámicas de datos y criterios de algoritmos", wxPoint(200, 200), wxSize(800, 600));
 	nEFrame->Show(true);
 
 	this->Show(false);
@@ -79,12 +82,11 @@ void MainFrame::OnOpenNewFrame3(wxCommandEvent& event)
 
 void MainFrame::OnOpenNewFrame4(wxCommandEvent& event)
 {
-	QFrame* nQFrame = new QFrame(this, "Evaluación de conceptos", wxPoint(200, 200), wxSize(800, 600));
+	QFrame* nQFrame = new QFrame(this, "Evaluación de conceptos", wxPoint(200, 200), wxSize(900, 600));
 	nQFrame->Show(true);
 
 	this->Show(false);
 }
-
 
 
 
@@ -94,7 +96,7 @@ void MainFrame::OnExitButtonClick(wxCommandEvent& event)
 	Close(true);
 }
 
-
+// Metodos llamados cuando ocurre el evento personalizado
 void MainFrame::OnQFrameClosed(wxCommandEvent& event) {
 	Show(true);
 }
@@ -102,4 +104,3 @@ void MainFrame::OnQFrameClosed(wxCommandEvent& event) {
 void MainFrame::OnCFrameClosed(wxCommandEvent& event) {
 	Show(true);
 }
-

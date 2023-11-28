@@ -15,16 +15,15 @@ QFrame::QFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
     this->button1 = new wxButton(panel, wxID_ANY, "Tema 1: C/C++", wxPoint(20, 50), wxSize(120, 50));
     this->button2 = new wxButton(panel, wxID_ANY, "Tema 2: OPP", wxPoint(20, 55 + 50), wxSize(120, 50));
     this->button3 = new wxButton(panel, wxID_ANY, "Tema 3: Estructuras", wxPoint(20, 55 + 50 + 55), wxSize(120, 50));
-    this->button5 = new wxButton(panel, wxID_ANY, "Regresar al menu principal", wxPoint(550, 400), wxSize(200, 50));
+    this->button5 = new wxButton(panel, wxID_ANY, "Regresar al menu principal", wxPoint(560, 400), wxSize(230, 50));
     this->button6 = new wxButton(panel, wxID_ANY, "Siguiente", wxPoint(200, 400), wxSize(200, 50));
 
     this->button6->Show(false);
 
-
-    this->buttonA = new wxCheckBox(panel, wxID_ANY, "A)", wxPoint(260, 105));
-    this->buttonB = new wxCheckBox(panel, wxID_ANY, "B)", wxPoint(260, 140));
-    this->buttonC = new wxCheckBox(panel, wxID_ANY, "C)", wxPoint(260, 175));
-    this->buttonD = new wxCheckBox(panel, wxID_ANY, "D)", wxPoint(260, 210));
+    this->buttonA = new wxCheckBox(panel, wxID_ANY, "A)", wxPoint(180, 105));
+    this->buttonB = new wxCheckBox(panel, wxID_ANY, "B)", wxPoint(180, 140));
+    this->buttonC = new wxCheckBox(panel, wxID_ANY, "C)", wxPoint(180, 175));
+    this->buttonD = new wxCheckBox(panel, wxID_ANY, "D)", wxPoint(180, 210));
 
     this->pastButton = nullptr;
 
@@ -39,9 +38,9 @@ QFrame::QFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
 
 
 // Este objeto representa el texto principal mostrado en la ventana actual (objeto)
-    this->m_textCtrl = new wxStaticText(panel, wxID_ANY, R"(EVALUACI�N DE SUS CONOCIMIENTOS)", wxPoint(300, 100), wxSize(250, 100), wxALIGN_LEFT);
+    this->m_textCtrl = new wxStaticText(panel, wxID_ANY, R"(EVALUACIÓN DE SUS CONOCIMIENTOS)", wxPoint(300, 100), wxSize(250, 100), wxALIGN_LEFT);
 
-// Creamos un objeto para definir el tama�o de letra, la familia de estilos, tipo de letra, grosor de la letra
+// Creamos un objeto para definir el tamaño de letra, la familia de estilos, tipo de letra, grosor de la letra
     wxFont font(16, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRAHEAVY);
 
 // Establecer la fuente en el objeto wxStaticText aplicando el metodo SetFont
@@ -49,7 +48,7 @@ QFrame::QFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
 
 
 
-// Este objeto representa el texto secundario u opcional que se podr�a mostrar en la ventana actual
+// Este objeto representa el texto secundario u opcional que se podría mostrar en la ventana actual
     this->extra_text = new wxStaticText(panel, wxID_ANY,"", wxPoint(350, 330), wxSize(300, 50), wxALIGN_LEFT);
     extra_text->Hide();
     this->extra_text->SetFont(font);
@@ -68,6 +67,12 @@ QFrame::QFrame(wxFrame* parent, const wxString& title, const wxPoint& pos, const
     buttonB->Bind(wxEVT_CHECKBOX, &QFrame::ABCDClick, this);
     buttonC->Bind(wxEVT_CHECKBOX, &QFrame::ABCDClick, this);
     buttonD->Bind(wxEVT_CHECKBOX, &QFrame::ABCDClick, this);
+
+    // Creamos un nuevo objeto (image)
+    wxPNGHandler* handler = new wxPNGHandler;
+    wxImage::AddHandler(handler);
+    this->image = new wxStaticBitmap(panel, wxID_ANY, wxBitmap("Images/quices.png", wxBITMAP_TYPE_PNG), wxPoint(250, 200), wxSize(285, 350));
+
 
 }
 
@@ -92,7 +97,7 @@ void QFrame::Updateimage(const wxString& newimage, int pixX, int pixY, int posX,
 
 // Los siguientes dos metodos son llamados para actualizar el valor de los objetos: m_textCtrl y extra_text
 void QFrame::UpdateQuestion(const wxString& Question, const wxString& OpcionA, const wxString& OpcionB, const wxString& OpcionC, const wxString& OpcionD, int posX, int posY)
-{   // Creamos un objeto para definir el tama�o de letra, la familia de estilos, tipo de letra, grosor de la letra
+{   // Creamos un objeto para definir el tamaño de letra, la familia de estilos, tipo de letra, grosor de la letra
     wxFont fonti(11, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_EXTRAHEAVY);
     // Establecer la fuente en el objeto wxStaticText aplicando el metodo SetFont
     this->m_textCtrl->SetFont(fonti);
@@ -128,7 +133,7 @@ void QFrame::OnButtonClick(wxCommandEvent& event)
     this->buttonC->Show(true);
     this->buttonD->Show(true);
 
-
+    image->Show(false);
 
 
     if (button)
@@ -147,47 +152,47 @@ void QFrame::OnButtonClick(wxCommandEvent& event)
         // Ocultamos el ultimo texto extra guardado en el objeto: extra_text
         extra_text->Hide();
         
-        // Aqu� puedes personalizar el texto seg�n el bot�n presionado
+        // Aquí puedes personalizar el texto según el botón presionado
         if (buttonText == "Tema 1: C/C++"|| (buttonText == "Siguiente"&& temita == "C++")) {
             temita = "C++";
             // Preguntas
-            wxString Pregunta1 = "Que es un entero?";
-            wxString Pregunta2 = "Que es la vida";
-            wxString Pregunta3 = "Que es un datatype";
-            wxString Pregunta4 = "Quien es usted?";
+            wxString Pregunta1 = "¿Cuál de estos tipos de datos elegiría si desea utilizar un numero con decimales ?";
+            wxString Pregunta2 = "Cuál de estos operadores representa la operación lógica AND?";
+            wxString Pregunta3 = "Si resultado = 5.5, cual sería el código correcto? (suponga que float A = 2.2)";
+            wxString Pregunta4 = "Cuál es la diferencia entre el bucle while y do while?";
             wxString Preguntas[] = { Pregunta1, Pregunta2, Pregunta3, Pregunta4 };
 
             // Respuestas en la opcion A
-            wxString RespuestaA1 = "Es un numero sin decimales";
-            wxString RespuestaA2 = "Es un despiche";
-            wxString RespuestaA3 = "Un tipo de dato jajaj XD";
-            wxString RespuestaA4 = " A usted que le importa";
+            wxString RespuestaA1 = "float";
+            wxString RespuestaA2 = "&&";
+            wxString RespuestaA3 = "float resultado = (A > 1) ? 5.5 : 1.4";
+            wxString RespuestaA4 = "do-while ejecuta al menos una vez un bloque de código antes de verificar la condición.";
             wxString Respuestas_A[] = { RespuestaA1, RespuestaA2, RespuestaA3, RespuestaA4 };
 
-            // Respuestas en la opci�n B
-            wxString RespuestaB1 = "Es un numero CON decimales";
-            wxString RespuestaB2 = "Yo que se";
-            wxString RespuestaB3 = "Es una carajada vacilona";
-            wxString RespuestaB4 = " Don Pedro";
+            // Respuestas en la opción B
+            wxString RespuestaB1 = "int";
+            wxString RespuestaB2 = "||";
+            wxString RespuestaB3 = "float resultado = (A > 1) ? 1.4 : 5.5";
+            wxString RespuestaB4 = "No existe ninguna diferencia entre ambos bucles";
             wxString Respuestas_B[] = { RespuestaB1, RespuestaB2, RespuestaB3, RespuestaB4 };
 
 
-            // Respuestas en la opci�n C
-            wxString RespuestaC1 = "I dont know dude";
-            wxString RespuestaC2 = "El profe sabe";
-            wxString RespuestaC3 = "Pinto";
-            wxString RespuestaC4 = " Don Luis";
+            // Respuestas en la opción C
+            wxString RespuestaC1 = "bool";
+            wxString RespuestaC2 = "|";
+            wxString RespuestaC3 = "float resultado = (A < 1) ? 5.5 : 1.4";
+            wxString RespuestaC4 = "while ejecuta al menos una vez un bloque de código antes de verificar la condición.";
             wxString Respuestas_C[] = { RespuestaC1, RespuestaC2, RespuestaC3, RespuestaC4 };
 
-            // Respuestas en la opci�n D
-            wxString RespuestaD1 = "La C es la correcta";
-            wxString RespuestaD2 = "El profe NO sabe";
-            wxString RespuestaD3 = "Pinto con huevooo";
-            wxString RespuestaD4 = "El presidente";
+            // Respuestas en la opción D
+            wxString RespuestaD1 = "char";
+            wxString RespuestaD2 = "+";
+            wxString RespuestaD3 = "float resultado = (A < 1) ? 5.0 : 1.4 ";
+            wxString RespuestaD4 = "do-while ejecuta al menos 5 veces un bloque de código antes de verificar la condición.";
             wxString Respuestas_D[] = { RespuestaD1, RespuestaD2, RespuestaD3, RespuestaD4 };
 
 
-            UpdateQuestion(Preguntas[e], Respuestas_A[e], Respuestas_B[e], Respuestas_C[e], Respuestas_D[e], 300, 50);
+            UpdateQuestion(Preguntas[e], Respuestas_A[e], Respuestas_B[e], Respuestas_C[e], Respuestas_D[e], 218, 50);
 
 
             e += 1;
@@ -203,43 +208,43 @@ void QFrame::OnButtonClick(wxCommandEvent& event)
 
 
 
-            wxString Pregunta1 = "Que es un entXDDDDDDDDDero?";
-            wxString Pregunta2 = "Que es la vidXDDDDDDDDDa";
-            wxString Pregunta3 = "Que es un datXDDDDDDDDDatype";
-            wxString Pregunta4 = "Quien es usteXDDDDDDDDDd?";
+            wxString Pregunta1 = "Un atributo es lo mismo que un método de un objeto creado?";
+            wxString Pregunta2 = "¿Cuál keyword utilizaría para establecer 0 restricciones de acceso a métodos o atributos?";
+            wxString Pregunta3 = "Al trabajar con clases, ¿por qué se utiliza un archivo .hpp y otro archivo .cpp?";
+            wxString Pregunta4 = "Una clase puede heredar los métodos de otra clase?";
             wxString Preguntas[] = { Pregunta1, Pregunta2, Pregunta3, Pregunta4 };
 
             // Respuestas en la opcion A
-            wxString RespuestaA1 = "Es un numero XDDDDDDDsin decimales";
-            wxString RespuestaA2 = "Es un despichXDDDDDDDe";
-            wxString RespuestaA3 = "Un tipo de daXDDDDDDDto jajaj XD";
-            wxString RespuestaA4 = " A usted que XDDDDDDDle importa";
+            wxString RespuestaA1 = "Sí, es lo mismo";
+            wxString RespuestaA2 = "protected";
+            wxString RespuestaA3 = "En ambos archivos se define lo mismo, por seguridad.";
+            wxString RespuestaA4 = "No es posible";
             wxString Respuestas_A[] = { RespuestaA1, RespuestaA2, RespuestaA3, RespuestaA4 };
 
-            // Respuestas en la opci�n B
-            wxString RespuestaB1 = "Es un XDDDDnumero CON decimales";
-            wxString RespuestaB2 = "Yo queXDDDD se";
-            wxString RespuestaB3 = "Es unaXDDDD carajada vacilona";
-            wxString RespuestaB4 = " Don PXDDDDedro";
+            // Respuestas en la opción B
+            wxString RespuestaB1 = "No, son cosas distintas";
+            wxString RespuestaB2 = "public";
+            wxString RespuestaB3 = "En el.hpp se inicializan atributos y los métodos. En el .cpp se implementan.";
+            wxString RespuestaB4 = "Sí, gracias a la herencia es posible";
             wxString Respuestas_B[] = { RespuestaB1, RespuestaB2, RespuestaB3, RespuestaB4 };
 
 
-            // Respuestas en la opci�n C
-            wxString RespuestaC1 = "I doXDDDDDDnt know dude";
-            wxString RespuestaC2 = "El pXDDDDDDrofe sabe";
-            wxString RespuestaC3 = "PintXDDDDDDo";
-            wxString RespuestaC4 = " DonXDDDDDD Luis";
+            // Respuestas en la opción C
+            wxString RespuestaC1 = "Sí son lo mismo, solo que el usuario solo puede utilizar los métodos de la clase.";
+            wxString RespuestaC2 = "private";
+            wxString RespuestaC3 = "En el .cpp se inicializan atributos y los métodos. En el .hpp se implementan.";
+            wxString RespuestaC4 = "Sí, pero solo puede heredar un método.";
             wxString Respuestas_C[] = { RespuestaC1, RespuestaC2, RespuestaC3, RespuestaC4 };
 
-            // Respuestas en la opci�n D
-            wxString RespuestaD1 = "La C es XDDDDDDDDla correcta";
-            wxString RespuestaD2 = "El profeXDDDDDDDD NO sabe";
-            wxString RespuestaD3 = "Pinto coXDDDDDDDDn huevooo";
-            wxString RespuestaD4 = "El presiXDDDDDDDDdente";
+            // Respuestas en la opción D
+            wxString RespuestaD1 = "No son lo mismo, el usuario solo puede utilizar los métodos de la clase.";
+            wxString RespuestaD2 = "free";
+            wxString RespuestaD3 = "En el.hpp solo se inicializan atributos. En el .cpp se implementan solo los métodos.";
+            wxString RespuestaD4 = "Sí, con la condición de que la clase derivada no puede crear métodos dentro esta.";
             wxString Respuestas_D[] = { RespuestaD1, RespuestaD2, RespuestaD3, RespuestaD4 };
 
 
-            UpdateQuestion(Preguntas[e], Respuestas_A[e], Respuestas_B[e], Respuestas_C[e], Respuestas_D[e], 300, 50);
+            UpdateQuestion(Preguntas[e], Respuestas_A[e], Respuestas_B[e], Respuestas_C[e], Respuestas_D[e], 218, 50);
 
 
             e += 1;
@@ -260,43 +265,43 @@ void QFrame::OnButtonClick(wxCommandEvent& event)
             this->button6->Show(true);
 
             // Preguntas
-            wxString Pregunta1 = "Que es unAAAAAAAAAAA entero?";
-            wxString Pregunta2 = "Que es laAAAAAA vida";
-            wxString Pregunta3 = "Que es unAAAAAA datatype";
-            wxString Pregunta4 = "Quien es AAAAAAusted?";
+            wxString Pregunta1 = "¿Cuál de las siguientes opciones es una estructura de datos que permite almacenar \n elementos de manera ordenada y acceder a ellos mediante un índice?";
+            wxString Pregunta2 = "¿Cuál de los siguientes algoritmos de ordenamiento tiene una complejidad temporal \npromedio de O(n log n)?";
+            wxString Pregunta3 = " ¿Cuál de las siguientes estructuras de datos de la Standard Template Library (STL)\n se utiliza para almacenar elementos sin repetición y garantiza la búsqueda rápida?";
+            wxString Pregunta4 = "¿Qué estructura de datos se utiliza para almacenar elementos de manera no ordenada y\n permite el acceso rápido a ellos mediante una clave única?";
             wxString Preguntas[] = { Pregunta1, Pregunta2, Pregunta3, Pregunta4 };
 
             // Respuestas en la opcion A
-            wxString RespuestaA1 = "Es un numerAAAAAAo sin decimales";
-            wxString RespuestaA2 = "Es un despiAAAAAAche";
-            wxString RespuestaA3 = "Un tipo de AAAAAAdato jajaj XD";
-            wxString RespuestaA4 = " A usted quAAAAAAe le importa";
+            wxString RespuestaA1 = "Lista";
+            wxString RespuestaA2 = "Bubble Sort";
+            wxString RespuestaA3 = "std::vector";
+            wxString RespuestaA4 = "Árbol binario";
             wxString Respuestas_A[] = { RespuestaA1, RespuestaA2, RespuestaA3, RespuestaA4 };
 
-            // Respuestas en la opci�n B
-            wxString RespuestaB1 = "Es un nAAAAAAumero CON decimales";
-            wxString RespuestaB2 = "Yo que AAAAAAse";
-            wxString RespuestaB3 = "Es una AAAAAAcarajada vacilona";
-            wxString RespuestaB4 = " Don PeAAAAAAdro";
+            // Respuestas en la opción B
+            wxString RespuestaB1 = "Pila";
+            wxString RespuestaB2 = "Insertion Sort";
+            wxString RespuestaB3 = "std::list";
+            wxString RespuestaB4 = "Set";
             wxString Respuestas_B[] = { RespuestaB1, RespuestaB2, RespuestaB3, RespuestaB4 };
 
 
-            // Respuestas en la opci�n C
-            wxString RespuestaC1 = "I donAAAAAAAAAt know dude";
-            wxString RespuestaC2 = "El prAAAAAAAAAofe sabe";
-            wxString RespuestaC3 = "PintoAAAAAAAAA";
-            wxString RespuestaC4 = " Don AAAAAAAAALuis";
+            // Respuestas en la opción C
+            wxString RespuestaC1 = "Set";
+            wxString RespuestaC2 = "Quick Sort";
+            wxString RespuestaC3 = "std::set";
+            wxString RespuestaC4 = "Diccionario";
             wxString Respuestas_C[] = { RespuestaC1, RespuestaC2, RespuestaC3, RespuestaC4 };
 
-            // Respuestas en la opci�n D
-            wxString RespuestaD1 = "La C eAAAAAAAAAAAAAs la correcta";
-            wxString RespuestaD2 = "El proAAAAAAAAAAAAAfe NO sabe";
-            wxString RespuestaD3 = "Pinto AAAAAAAAAAAAAcon huevooo";
-            wxString RespuestaD4 = "El preAAAAAAAAAAAAAsidente";
+            // Respuestas en la opción D
+            wxString RespuestaD1 = "Cola";
+            wxString RespuestaD2 = "Selection Sort";
+            wxString RespuestaD3 = "std::map";
+            wxString RespuestaD4 = "Lista enlazada";
             wxString Respuestas_D[] = { RespuestaD1, RespuestaD2, RespuestaD3, RespuestaD4 };
 
 
-            UpdateQuestion(Preguntas[e], Respuestas_A[e], Respuestas_B[e], Respuestas_C[e], Respuestas_D[e], 300, 50);
+            UpdateQuestion(Preguntas[e], Respuestas_A[e], Respuestas_B[e], Respuestas_C[e], Respuestas_D[e], 218, 30);
 
 
             e += 1;
@@ -306,7 +311,7 @@ void QFrame::OnButtonClick(wxCommandEvent& event)
             }
            
         }
-        // Puedes agregar m�s condiciones seg?n la l�gica que desees
+        // Puedes agregar más condiciones seg?n la lógica que desees
     }
 }
 
@@ -339,10 +344,10 @@ void QFrame::ABCDClick(wxCommandEvent& event)
         if(temita == "C++") {
             
             if (ABCD_str == "A)") {
-                UpdateExtraText("Respuesta correcta amigo :)", 350, 300);
+                UpdateExtraText("Respuesta correcta amig@ :)", 350, 300);
             }
             else {
-                UpdateExtraText("Respuesta incorrecta amigo :(", 350, 300);
+                UpdateExtraText("Respuesta incorrecta amig@ :(", 350, 300);
             }
             
         }
@@ -360,15 +365,16 @@ void QFrame::ABCDClick(wxCommandEvent& event)
         else if (temita == "estructuras") {
 
             if (ABCD_str == "C)") {
-                UpdateExtraText("Respuesta correcta :)", 350, 300);
+                UpdateExtraText("Respuesta correcta ak7 :)", 350, 300);
             }
             else {
-                UpdateExtraText("Respuesta incorrecta :(", 350, 300);
+                UpdateExtraText("Respuesta incorrecta mae :(", 350, 300);
             }
     
         }
     }
 }
+
 
 
 
